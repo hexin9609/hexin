@@ -534,7 +534,7 @@
         "🇨🇴哥伦比亚 波哥大 IEPL实验性中继"
       ],
       "type": "urltest",
-      "url": "https://www.gstatic.com/generate_204",
+      "url": "http://cp.cloudflare.com/",
       "tolerance": 50,
       "interrupt_exist_connections": false
     },
@@ -586,7 +586,7 @@
         "🇨🇴哥伦比亚 波哥大 IEPL实验性中继"
       ],
       "type": "urltest",
-      "url": "https://www.gstatic.com/generate_204",
+      "url": "http://cp.cloudflare.com/",
       "tolerance": 50,
       "interrupt_exist_connections": false
     },
@@ -716,7 +716,7 @@
         "🇯🇵日本 广移中继 备用"
       ],
       "type": "urltest",
-      "url": "https://www.gstatic.com/generate_204",
+      "url": "http://cp.cloudflare.com/",
       "tolerance": 50,
       "interrupt_exist_connections": false
     },
@@ -737,7 +737,7 @@
         "🇭🇰香港广移中继 备用"
       ],
       "type": "urltest",
-      "url": "https://www.gstatic.com/generate_204",
+      "url": "http://cp.cloudflare.com/",
       "tolerance": 50,
       "interrupt_exist_connections": false
     },
@@ -758,7 +758,7 @@
         "🇺🇸美国 广移中继 备用"
       ],
       "type": "urltest",
-      "url": "https://www.gstatic.com/generate_204",
+      "url": "http://cp.cloudflare.com/",
       "tolerance": 50,
       "interrupt_exist_connections": false
     },
@@ -782,8 +782,10 @@
         "🇨🇳台湾 沪日IEPL中继4",
         "🇨🇳台湾 广移中继 备用"
       ],
-      "interrupt_exist_connections": true,
-      "type": "selector"
+      "type": "urltest",
+      "url": "http://cp.cloudflare.com/",
+      "tolerance": 50,
+      "interrupt_exist_connections": false
     },
     {
       "tag": " 🇸🇬 新加坡",
@@ -817,7 +819,7 @@
         "🇸🇬新加坡 广移中继 备用"
       ],
       "type": "urltest",
-      "url": "https://www.gstatic.com/generate_204",
+      "url": "http://cp.cloudflare.com/",
       "tolerance": 50,
       "interrupt_exist_connections": false
     },
@@ -847,7 +849,7 @@
         "🇨🇴哥伦比亚 波哥大 IEPL实验性中继"
       ],
       "type": "urltest",
-      "url": "https://www.gstatic.com/generate_204",
+      "url": "http://cp.cloudflare.com/",
       "tolerance": 50,
       "interrupt_exist_connections": false
     },
