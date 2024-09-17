@@ -1,0 +1,2128 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db",
+      "cache_id": "my_profile2",
+      "store_fakeip": true
+    },
+    "clash_api": {
+      "external_ui": "ui",
+      "external_controller": "0.0.0.0:9090",
+      "external_ui_download_detour": "Proxy",
+      "default_mode": "rule"
+    }
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "google",
+        "address": "tls://8.8.8.8",
+        "detour": "Proxy"
+      },
+      {
+        "tag": "fallback",
+        "address": "8.8.8.8",
+        "address_resolver": "google",
+        "detour": "Proxy"
+      },
+      {
+        "tag": "local-dns",
+        "address": "223.5.5.5",
+        "detour": "direct"
+      },
+      {
+        "tag": "block-dns",
+        "address": "rcode://success"
+      },
+      {
+        "tag": "Youtubedns",
+        "address": "8.8.8.8",
+        "detour": "Youtube"
+      },
+      {
+        "tag": "Telegramdns",
+        "address": "8.8.8.8",
+        "detour": "Telegram"
+      },
+      {
+        "tag": "Githubdns",
+        "address": "8.8.8.8",
+        "detour": "Github"
+      },
+      {
+        "tag": "Openaidns",
+        "address": "8.8.8.8",
+        "detour": "Openai"
+      },
+      {
+        "tag": "Netflixdns",
+        "address": "8.8.8.8",
+        "detour": "Netflix"
+      },
+      {
+        "tag": "Googledns",
+        "address": "8.8.8.8",
+        "detour": "Google"
+      },
+      {
+        "tag": "Directdns",
+        "address": "8.8.8.8",
+        "detour": "Direct"
+      }
+    ],
+    "rules": [
+      {
+        "outbound": "any",
+        "server": "local-dns"
+      },
+      {
+        "rule_set": [
+          "Youtube0"
+        ],
+        "server": "Youtubedns"
+      },
+      {
+        "rule_set": [
+          "Telegram1"
+        ],
+        "server": "Telegramdns"
+      },
+      {
+        "rule_set": [
+          "Github0"
+        ],
+        "server": "Githubdns"
+      },
+      {
+        "rule_set": [
+          "Openai0"
+        ],
+        "server": "Openaidns"
+      },
+      {
+        "rule_set": [
+          "Netflix0"
+        ],
+        "server": "Netflixdns"
+      },
+      {
+        "rule_set": [
+          "Google0"
+        ],
+        "server": "Googledns"
+      },
+      {
+        "rule_set": [
+          "Direct1"
+        ],
+        "server": "local-dns"
+      },
+      {
+        "query_type": [
+          "A"
+        ],
+        "rewrite_ttl": 1,
+        "server": "fallback"
+      }
+    ],
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "::",
+      "listen_port": 8888,
+      "sniff": true
+    },
+    {
+      "type": "tproxy",
+      "tag": "tproxy-in",
+      "listen": "::",
+      "listen_port": 9888,
+      "sniff_override_destination": true,
+      "sniff": true
+    },
+    {
+      "type": "direct",
+      "listen": "::",
+      "listen_port": 53,
+      "sniff": true,
+      "tag": "dns-in"
+    }
+  ],
+  "route": {
+    "rule_set": [
+      {
+        "type": "remote",
+        "format": "binary",
+        "download_detour": "Proxy",
+        "tag": "Youtube0",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/youtube.srs"
+      },
+      {
+        "type": "remote",
+        "format": "binary",
+        "download_detour": "Proxy",
+        "tag": "Telegram0",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geoip/telegram.srs"
+      },
+      {
+        "type": "remote",
+        "format": "binary",
+        "download_detour": "Proxy",
+        "tag": "Telegram1",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/telegram.srs"
+      },
+      {
+        "type": "remote",
+        "format": "binary",
+        "download_detour": "Proxy",
+        "tag": "Github0",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/github.srs"
+      },
+      {
+        "type": "remote",
+        "format": "binary",
+        "download_detour": "Proxy",
+        "tag": "Openai0",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/openai.srs"
+      },
+      {
+        "type": "remote",
+        "format": "binary",
+        "download_detour": "Proxy",
+        "tag": "Netflix0",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/netflix.srs"
+      },
+      {
+        "type": "remote",
+        "format": "binary",
+        "download_detour": "Proxy",
+        "tag": "Netflix1",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geoip/netflix.srs"
+      },
+      {
+        "type": "remote",
+        "format": "binary",
+        "download_detour": "Proxy",
+        "tag": "Google0",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/google.srs"
+      },
+      {
+        "type": "remote",
+        "format": "binary",
+        "download_detour": "Proxy",
+        "tag": "Direct0",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geoip/cn.srs"
+      },
+      {
+        "type": "remote",
+        "format": "binary",
+        "download_detour": "Proxy",
+        "tag": "Direct1",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo/geosite/cn.srs"
+      }
+    ],
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      },
+      {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "port": 853
+          },
+          {
+            "network": "udp",
+            "port": 443
+          },
+          {
+            "protocol": "stun"
+          }
+        ],
+        "outbound": "block"
+      },
+      {
+        "rule_set": [
+          "Youtube0"
+        ],
+        "outbound": "Youtube"
+      },
+      {
+        "rule_set": [
+          "Telegram0",
+          "Telegram1"
+        ],
+        "outbound": "Telegram"
+      },
+      {
+        "rule_set": [
+          "Github0"
+        ],
+        "outbound": "Github"
+      },
+      {
+        "rule_set": [
+          "Openai0"
+        ],
+        "outbound": "Openai"
+      },
+      {
+        "rule_set": [
+          "Netflix0",
+          "Netflix1"
+        ],
+        "outbound": "Netflix"
+      },
+      {
+        "rule_set": [
+          "Google0"
+        ],
+        "outbound": "Google"
+      },
+      {
+        "rule_set": [
+          "Direct0",
+          "Direct1"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      }
+    ],
+    "auto_detect_interface": true,
+    "final": "Proxy"
+  },
+  "outbounds": [
+    {
+      "tag": "Proxy",
+      "outbounds": [
+        "🌎 自动选择",
+        "渔云机场",
+        "👆 手动选择",
+        "🇯🇵 日本",
+        "🇭🇰 香港",
+        "🇺🇸 美国",
+        " 🇹🇼 台湾",
+        " 🇸🇬 新加坡",
+        "其他地区"
+      ],
+      "interrupt_exist_connections": true,
+      "type": "selector"
+    },
+    {
+      "tag": "Youtube",
+      "outbounds": [
+        "Proxy",
+        "🌎 自动选择",
+        "渔云机场",
+        "👆 手动选择",
+        "🇯🇵 日本",
+        "🇭🇰 香港",
+        "🇺🇸 美国",
+        " 🇹🇼 台湾",
+        " 🇸🇬 新加坡",
+        "其他地区"
+      ],
+      "interrupt_exist_connections": true,
+      "type": "selector"
+    },
+    {
+      "tag": "Telegram",
+      "outbounds": [
+        "Proxy",
+        "🌎 自动选择",
+        "渔云机场",
+        "👆 手动选择",
+        "🇯🇵 日本",
+        "🇭🇰 香港",
+        "🇺🇸 美国",
+        " 🇹🇼 台湾",
+        " 🇸🇬 新加坡",
+        "其他地区"
+      ],
+      "interrupt_exist_connections": true,
+      "type": "selector"
+    },
+    {
+      "tag": "Github",
+      "outbounds": [
+        "Proxy",
+        "🌎 自动选择",
+        "渔云机场",
+        "👆 手动选择",
+        "🇯🇵 日本",
+        "🇭🇰 香港",
+        "🇺🇸 美国",
+        " 🇹🇼 台湾",
+        " 🇸🇬 新加坡",
+        "其他地区"
+      ],
+      "interrupt_exist_connections": true,
+      "type": "selector"
+    },
+    {
+      "tag": "Openai",
+      "outbounds": [
+        "Proxy",
+        "🌎 自动选择",
+        "渔云机场",
+        "👆 手动选择",
+        "🇯🇵 日本",
+        "🇭🇰 香港",
+        "🇺🇸 美国",
+        " 🇹🇼 台湾",
+        " 🇸🇬 新加坡",
+        "其他地区"
+      ],
+      "interrupt_exist_connections": true,
+      "type": "selector"
+    },
+    {
+      "tag": "Netflix",
+      "outbounds": [
+        "Proxy",
+        "🌎 自动选择",
+        "渔云机场",
+        "👆 手动选择",
+        "🇯🇵 日本",
+        "🇭🇰 香港",
+        "🇺🇸 美国",
+        " 🇹🇼 台湾",
+        " 🇸🇬 新加坡",
+        "其他地区"
+      ],
+      "interrupt_exist_connections": true,
+      "type": "selector"
+    },
+    {
+      "tag": "Google",
+      "outbounds": [
+        "Proxy",
+        "🌎 自动选择",
+        "渔云机场",
+        "👆 手动选择",
+        "🇯🇵 日本",
+        "🇭🇰 香港",
+        "🇺🇸 美国",
+        " 🇹🇼 台湾",
+        " 🇸🇬 新加坡",
+        "其他地区"
+      ],
+      "interrupt_exist_connections": true,
+      "type": "selector"
+    },
+    {
+      "tag": "🌎 自动选择",
+      "outbounds": [
+        "新加坡|02|直连快",
+        "新加坡|01|直连快",
+        "新加坡|02直连2快",
+        "新加坡02直连快",
+        "日本1直连快",
+        "新加坡01直连快",
+        "新加坡|03直连快",
+        "新加坡2直连",
+        "日本H01直连Hysteria2",
+        "新加坡|01直连Hysteria2快",
+        "新加坡H01直连Hysteria2",
+        "新加坡|02直连Hysteria2",
+        "新加坡03直连Hysteria2",
+        "新加坡|09|直连Hysteria2",
+        "新加坡09直连Hysteria2",
+        "新加坡|06直连Hysteria2",
+        "日本H04直连Hysteria2",
+        "日本H02直连Hysteria2",
+        "日本H05直连Hysteria2",
+        "印度|01|直连Hysteria2",
+        "英国|01|直连Hysteria2",
+        "韩国|02|直连Hysteria2",
+        "美国H01直连Hysteria2",
+        "香港H03直连Hysteria2",
+        "香港H07直连Hysteria2",
+        "香港H|06|直连Hysteria2",
+        "新加坡|01|直连A快",
+        "香港|01|直连快",
+        "香港|01|隧道",
+        "新加坡|05直连快",
+        "新加坡|01直连快",
+        "新加坡|04|直连A",
+        "新加坡|04直连A",
+        "台湾01直连ChatGPT3",
+        "台湾02直连ChatGPT3",
+        "台湾|01奈飞ChatGPT2",
+        "台湾|05奈飞ChatGPT4",
+        "台湾02奈飞ChatGPT",
+        "台湾|04奈飞ChatGPT3",
+        "台湾|05奈飞ChatGPT5",
+        "台湾|02奈飞ChatGPTC",
+        "台湾|03奈飞ChatGPTC",
+        "台湾|02奈飞ChatGPT0",
+        "台湾|03奈飞ChatGPT1",
+        "美国|05奈飞ChatGPT0",
+        "新加坡|04直连5",
+        "日本|05|直连快",
+        "日本2直连快",
+        "日本4隧道快",
+        "新加坡01奈飞ChatGPT",
+        "新加坡02奈飞ChatGPT",
+        "香港01奈飞ChatGPT",
+        "香港02奈飞ChatGPT",
+        "美国|02隧道",
+        "美国|02隧道2",
+        "美国|03奈飞ChatGPT1",
+        "美国|03奈飞ChatGPT快",
+        "美国|05奈飞ChatGPT快",
+        "🇭🇰 香港 深港IEPL中继1",
+        "🇭🇰香港 深港IEPL中继2",
+        "🇭🇰香港 沪日IEPL中继3",
+        "🇭🇰香港 沪日IEPL中继4",
+        "🇭🇰香港广移中继 备用",
+        "🇨🇳台湾 深港IEPL中继1",
+        "🇨🇳台湾 深港IEPL中继2",
+        "🇨🇳台湾 沪日IEPL中继3",
+        "🇨🇳台湾 沪日IEPL中继4",
+        "🇨🇳台湾 广移中继 备用",
+        "🇯🇵日本 深港IEPL中继1",
+        "🇯🇵日本 深港IEPL中继2",
+        "🇯🇵日本 沪日IEPL中继3",
+        "🇯🇵日本 沪日IEPL中继4",
+        "🇯🇵日本 广移中继 备用",
+        "🇸🇬新加坡 深港IEPL中继1",
+        "🇸🇬新加坡 深港IEPL中继2",
+        "🇸🇬新加坡 沪日IEPL中继3",
+        "🇸🇬新加坡 沪日IEPL中继4",
+        "🇸🇬新加坡 广移中继 备用",
+        "🇺🇸美国  深港IEPL中继1",
+        "🇺🇸美国  深港IEPL中继2",
+        "🇺🇸美国  沪日IEPL中继3",
+        "🇺🇸美国  沪日IEPL中继4",
+        "🇺🇸美国 广移中继 备用",
+        "🇰🇷韩国 首尔 IEPL实验性中继",
+        "🇦🇺澳大利亚 悉尼 IEPL实验性中继",
+        "🇮🇳印度 孟买 IEPL实验性中继",
+        "🇨🇦加拿大 蒙特利尔 IEPL实验性中继",
+        "🇲🇽墨西哥 克雷塔罗 IEPL实验性中继",
+        "🇫🇷法国 巴黎 IEPL实验性中继",
+        "🇮🇹意大利 米兰 IEPL实验性中继",
+        "🇳🇱荷兰 阿姆斯特丹 IEPL实验性中继",
+        "🇪🇸西班牙 马德里 IEPL实验性中继",
+        "🇨🇭瑞士 苏黎世 IEPL实验性中继",
+        "🇬🇧英国 伦敦 IEPL实验性中继",
+        "🇮🇱以色列 耶路撒冷 IEPL实验性中继",
+        "🇸🇦沙特阿拉伯 吉达 IEPL实验性中继",
+        "🇿🇦南非 约翰内斯堡 IEPL实验性中继",
+        "🇦🇪阿联酋 迪拜 IEPL实验性中继",
+        "🇧🇷巴西 圣保罗 IEPL实验性中继",
+        "🇨🇱智利 圣地亚哥 IEPL实验性中继",
+        "🇨🇴哥伦比亚 波哥大 IEPL实验性中继"
+      ],
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204",
+      "tolerance": 50,
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "渔云机场",
+      "outbounds": [
+        "🇭🇰 香港 深港IEPL中继1",
+        "🇭🇰香港 深港IEPL中继2",
+        "🇭🇰香港 沪日IEPL中继3",
+        "🇭🇰香港 沪日IEPL中继4",
+        "🇭🇰香港广移中继 备用",
+        "🇨🇳台湾 深港IEPL中继1",
+        "🇨🇳台湾 深港IEPL中继2",
+        "🇨🇳台湾 沪日IEPL中继3",
+        "🇨🇳台湾 沪日IEPL中继4",
+        "🇨🇳台湾 广移中继 备用",
+        "🇯🇵日本 深港IEPL中继1",
+        "🇯🇵日本 深港IEPL中继2",
+        "🇯🇵日本 沪日IEPL中继3",
+        "🇯🇵日本 沪日IEPL中继4",
+        "🇯🇵日本 广移中继 备用",
+        "🇸🇬新加坡 深港IEPL中继1",
+        "🇸🇬新加坡 深港IEPL中继2",
+        "🇸🇬新加坡 沪日IEPL中继3",
+        "🇸🇬新加坡 沪日IEPL中继4",
+        "🇸🇬新加坡 广移中继 备用",
+        "🇺🇸美国  深港IEPL中继1",
+        "🇺🇸美国  深港IEPL中继2",
+        "🇺🇸美国  沪日IEPL中继3",
+        "🇺🇸美国  沪日IEPL中继4",
+        "🇺🇸美国 广移中继 备用",
+        "🇰🇷韩国 首尔 IEPL实验性中继",
+        "🇦🇺澳大利亚 悉尼 IEPL实验性中继",
+        "🇮🇳印度 孟买 IEPL实验性中继",
+        "🇨🇦加拿大 蒙特利尔 IEPL实验性中继",
+        "🇲🇽墨西哥 克雷塔罗 IEPL实验性中继",
+        "🇫🇷法国 巴黎 IEPL实验性中继",
+        "🇮🇹意大利 米兰 IEPL实验性中继",
+        "🇳🇱荷兰 阿姆斯特丹 IEPL实验性中继",
+        "🇪🇸西班牙 马德里 IEPL实验性中继",
+        "🇨🇭瑞士 苏黎世 IEPL实验性中继",
+        "🇬🇧英国 伦敦 IEPL实验性中继",
+        "🇮🇱以色列 耶路撒冷 IEPL实验性中继",
+        "🇸🇦沙特阿拉伯 吉达 IEPL实验性中继",
+        "🇿🇦南非 约翰内斯堡 IEPL实验性中继",
+        "🇦🇪阿联酋 迪拜 IEPL实验性中继",
+        "🇧🇷巴西 圣保罗 IEPL实验性中继",
+        "🇨🇱智利 圣地亚哥 IEPL实验性中继",
+        "🇨🇴哥伦比亚 波哥大 IEPL实验性中继"
+      ],
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204",
+      "tolerance": 50,
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "👆 手动选择",
+      "outbounds": [
+        "新加坡|02|直连快",
+        "新加坡|01|直连快",
+        "新加坡|02直连2快",
+        "新加坡02直连快",
+        "日本1直连快",
+        "新加坡01直连快",
+        "新加坡|03直连快",
+        "新加坡2直连",
+        "日本H01直连Hysteria2",
+        "新加坡|01直连Hysteria2快",
+        "新加坡H01直连Hysteria2",
+        "新加坡|02直连Hysteria2",
+        "新加坡03直连Hysteria2",
+        "新加坡|09|直连Hysteria2",
+        "新加坡09直连Hysteria2",
+        "新加坡|06直连Hysteria2",
+        "日本H04直连Hysteria2",
+        "日本H02直连Hysteria2",
+        "日本H05直连Hysteria2",
+        "印度|01|直连Hysteria2",
+        "英国|01|直连Hysteria2",
+        "韩国|02|直连Hysteria2",
+        "美国H01直连Hysteria2",
+        "香港H03直连Hysteria2",
+        "香港H07直连Hysteria2",
+        "香港H|06|直连Hysteria2",
+        "新加坡|01|直连A快",
+        "香港|01|直连快",
+        "香港|01|隧道",
+        "新加坡|05直连快",
+        "新加坡|01直连快",
+        "新加坡|04|直连A",
+        "新加坡|04直连A",
+        "台湾01直连ChatGPT3",
+        "台湾02直连ChatGPT3",
+        "台湾|01奈飞ChatGPT2",
+        "台湾|05奈飞ChatGPT4",
+        "台湾02奈飞ChatGPT",
+        "台湾|04奈飞ChatGPT3",
+        "台湾|05奈飞ChatGPT5",
+        "台湾|02奈飞ChatGPTC",
+        "台湾|03奈飞ChatGPTC",
+        "台湾|02奈飞ChatGPT0",
+        "台湾|03奈飞ChatGPT1",
+        "美国|05奈飞ChatGPT0",
+        "新加坡|04直连5",
+        "日本|05|直连快",
+        "日本2直连快",
+        "日本4隧道快",
+        "新加坡01奈飞ChatGPT",
+        "新加坡02奈飞ChatGPT",
+        "香港01奈飞ChatGPT",
+        "香港02奈飞ChatGPT",
+        "美国|02隧道",
+        "美国|02隧道2",
+        "美国|03奈飞ChatGPT1",
+        "美国|03奈飞ChatGPT快",
+        "美国|05奈飞ChatGPT快",
+        "🇭🇰 香港 深港IEPL中继1",
+        "🇭🇰香港 深港IEPL中继2",
+        "🇭🇰香港 沪日IEPL中继3",
+        "🇭🇰香港 沪日IEPL中继4",
+        "🇭🇰香港广移中继 备用",
+        "🇨🇳台湾 深港IEPL中继1",
+        "🇨🇳台湾 深港IEPL中继2",
+        "🇨🇳台湾 沪日IEPL中继3",
+        "🇨🇳台湾 沪日IEPL中继4",
+        "🇨🇳台湾 广移中继 备用",
+        "🇯🇵日本 深港IEPL中继1",
+        "🇯🇵日本 深港IEPL中继2",
+        "🇯🇵日本 沪日IEPL中继3",
+        "🇯🇵日本 沪日IEPL中继4",
+        "🇯🇵日本 广移中继 备用",
+        "🇸🇬新加坡 深港IEPL中继1",
+        "🇸🇬新加坡 深港IEPL中继2",
+        "🇸🇬新加坡 沪日IEPL中继3",
+        "🇸🇬新加坡 沪日IEPL中继4",
+        "🇸🇬新加坡 广移中继 备用",
+        "🇺🇸美国  深港IEPL中继1",
+        "🇺🇸美国  深港IEPL中继2",
+        "🇺🇸美国  沪日IEPL中继3",
+        "🇺🇸美国  沪日IEPL中继4",
+        "🇺🇸美国 广移中继 备用",
+        "🇰🇷韩国 首尔 IEPL实验性中继",
+        "🇦🇺澳大利亚 悉尼 IEPL实验性中继",
+        "🇮🇳印度 孟买 IEPL实验性中继",
+        "🇨🇦加拿大 蒙特利尔 IEPL实验性中继",
+        "🇲🇽墨西哥 克雷塔罗 IEPL实验性中继",
+        "🇫🇷法国 巴黎 IEPL实验性中继",
+        "🇮🇹意大利 米兰 IEPL实验性中继",
+        "🇳🇱荷兰 阿姆斯特丹 IEPL实验性中继",
+        "🇪🇸西班牙 马德里 IEPL实验性中继",
+        "🇨🇭瑞士 苏黎世 IEPL实验性中继",
+        "🇬🇧英国 伦敦 IEPL实验性中继",
+        "🇮🇱以色列 耶路撒冷 IEPL实验性中继",
+        "🇸🇦沙特阿拉伯 吉达 IEPL实验性中继",
+        "🇿🇦南非 约翰内斯堡 IEPL实验性中继",
+        "🇦🇪阿联酋 迪拜 IEPL实验性中继",
+        "🇧🇷巴西 圣保罗 IEPL实验性中继",
+        "🇨🇱智利 圣地亚哥 IEPL实验性中继",
+        "🇨🇴哥伦比亚 波哥大 IEPL实验性中继"
+      ],
+      "interrupt_exist_connections": true,
+      "type": "selector"
+    },
+    {
+      "tag": "🇯🇵 日本",
+      "outbounds": [
+        "日本1直连快",
+        "日本H01直连Hysteria2",
+        "日本H04直连Hysteria2",
+        "日本H02直连Hysteria2",
+        "日本H05直连Hysteria2",
+        "日本|05|直连快",
+        "日本2直连快",
+        "日本4隧道快",
+        "🇯🇵日本 深港IEPL中继1",
+        "🇯🇵日本 深港IEPL中继2",
+        "🇯🇵日本 沪日IEPL中继3",
+        "🇯🇵日本 沪日IEPL中继4",
+        "🇯🇵日本 广移中继 备用"
+      ],
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204",
+      "tolerance": 50,
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇭🇰 香港",
+      "outbounds": [
+        "香港H03直连Hysteria2",
+        "香港H07直连Hysteria2",
+        "香港H|06|直连Hysteria2",
+        "香港|01|直连快",
+        "香港|01|隧道",
+        "香港01奈飞ChatGPT",
+        "香港02奈飞ChatGPT",
+        "🇭🇰 香港 深港IEPL中继1",
+        "🇭🇰香港 深港IEPL中继2",
+        "🇭🇰香港 沪日IEPL中继3",
+        "🇭🇰香港 沪日IEPL中继4",
+        "🇭🇰香港广移中继 备用"
+      ],
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204",
+      "tolerance": 50,
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇺🇸 美国",
+      "outbounds": [
+        "美国H01直连Hysteria2",
+        "美国|05奈飞ChatGPT0",
+        "美国|02隧道",
+        "美国|02隧道2",
+        "美国|03奈飞ChatGPT1",
+        "美国|03奈飞ChatGPT快",
+        "美国|05奈飞ChatGPT快",
+        "🇺🇸美国  深港IEPL中继1",
+        "🇺🇸美国  深港IEPL中继2",
+        "🇺🇸美国  沪日IEPL中继3",
+        "🇺🇸美国  沪日IEPL中继4",
+        "🇺🇸美国 广移中继 备用"
+      ],
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204",
+      "tolerance": 50,
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": " 🇹🇼 台湾",
+      "outbounds": [
+        "台湾01直连ChatGPT3",
+        "台湾02直连ChatGPT3",
+        "台湾|01奈飞ChatGPT2",
+        "台湾|05奈飞ChatGPT4",
+        "台湾02奈飞ChatGPT",
+        "台湾|04奈飞ChatGPT3",
+        "台湾|05奈飞ChatGPT5",
+        "台湾|02奈飞ChatGPTC",
+        "台湾|03奈飞ChatGPTC",
+        "台湾|02奈飞ChatGPT0",
+        "台湾|03奈飞ChatGPT1",
+        "🇨🇳台湾 深港IEPL中继1",
+        "🇨🇳台湾 深港IEPL中继2",
+        "🇨🇳台湾 沪日IEPL中继3",
+        "🇨🇳台湾 沪日IEPL中继4",
+        "🇨🇳台湾 广移中继 备用"
+      ],
+      "interrupt_exist_connections": true,
+      "type": "selector"
+    },
+    {
+      "tag": " 🇸🇬 新加坡",
+      "outbounds": [
+        "新加坡|02|直连快",
+        "新加坡|01|直连快",
+        "新加坡|02直连2快",
+        "新加坡02直连快",
+        "新加坡01直连快",
+        "新加坡|03直连快",
+        "新加坡2直连",
+        "新加坡|01直连Hysteria2快",
+        "新加坡H01直连Hysteria2",
+        "新加坡|02直连Hysteria2",
+        "新加坡03直连Hysteria2",
+        "新加坡|09|直连Hysteria2",
+        "新加坡09直连Hysteria2",
+        "新加坡|06直连Hysteria2",
+        "新加坡|01|直连A快",
+        "新加坡|05直连快",
+        "新加坡|01直连快",
+        "新加坡|04|直连A",
+        "新加坡|04直连A",
+        "新加坡|04直连5",
+        "新加坡01奈飞ChatGPT",
+        "新加坡02奈飞ChatGPT",
+        "🇸🇬新加坡 深港IEPL中继1",
+        "🇸🇬新加坡 深港IEPL中继2",
+        "🇸🇬新加坡 沪日IEPL中继3",
+        "🇸🇬新加坡 沪日IEPL中继4",
+        "🇸🇬新加坡 广移中继 备用"
+      ],
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204",
+      "tolerance": 50,
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "其他地区",
+      "outbounds": [
+        "印度|01|直连Hysteria2",
+        "英国|01|直连Hysteria2",
+        "韩国|02|直连Hysteria2",
+        "🇰🇷韩国 首尔 IEPL实验性中继",
+        "🇦🇺澳大利亚 悉尼 IEPL实验性中继",
+        "🇮🇳印度 孟买 IEPL实验性中继",
+        "🇨🇦加拿大 蒙特利尔 IEPL实验性中继",
+        "🇲🇽墨西哥 克雷塔罗 IEPL实验性中继",
+        "🇫🇷法国 巴黎 IEPL实验性中继",
+        "🇮🇹意大利 米兰 IEPL实验性中继",
+        "🇳🇱荷兰 阿姆斯特丹 IEPL实验性中继",
+        "🇪🇸西班牙 马德里 IEPL实验性中继",
+        "🇨🇭瑞士 苏黎世 IEPL实验性中继",
+        "🇬🇧英国 伦敦 IEPL实验性中继",
+        "🇮🇱以色列 耶路撒冷 IEPL实验性中继",
+        "🇸🇦沙特阿拉伯 吉达 IEPL实验性中继",
+        "🇿🇦南非 约翰内斯堡 IEPL实验性中继",
+        "🇦🇪阿联酋 迪拜 IEPL实验性中继",
+        "🇧🇷巴西 圣保罗 IEPL实验性中继",
+        "🇨🇱智利 圣地亚哥 IEPL实验性中继",
+        "🇨🇴哥伦比亚 波哥大 IEPL实验性中继"
+      ],
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204",
+      "tolerance": 50,
+      "interrupt_exist_connections": false
+    },
+    {
+      "type": "direct",
+      "tag": "➜ Direct"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    },
+    {
+      "tag": "剩余流量：489.43 GB",
+      "server": "twjpzz.156786.xyz",
+      "server_port": 63227,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "2jp04162531be-29a9-2764-8627-51a5f4436fbd.233235.xyz"
+      }
+    },
+    {
+      "tag": "套餐到期：长期有效",
+      "server": "twjpzz.156786.xyz",
+      "server_port": 63227,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "2jp04162531be-29a9-2764-8627-51a5f4436fbd.233235.xyz"
+      }
+    },
+    {
+      "tag": "防失联页https://github.com/feiniaoyun",
+      "server": "twjpzz.156786.xyz",
+      "server_port": 63227,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "2jp04162531be-29a9-2764-8627-51a5f4436fbd.233235.xyz"
+      }
+    },
+    {
+      "tag": "推荐使用新加坡直连或者日本直连节点，速度更快",
+      "server": "sg1234.156786.xyz",
+      "server_port": 8080,
+      "type": "hysteria2",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "sg1234.156786.xyz"
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "tag": "最新节点支持Hysteria2协议，请到官网下载最新客户端",
+      "server": "twjpzz2.156786.xyz",
+      "server_port": 54957,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "2jp04162531be-29a9-2764-8627-51a5f4436fbd.233235.xyz"
+      }
+    },
+    {
+      "tag": "新加坡|02|直连快",
+      "server": "1sgmax02.156786.xyz",
+      "server_port": 719,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "1sgmax02.156786.xyz"
+      }
+    },
+    {
+      "tag": "新加坡|01|直连快",
+      "server": "1sg0001.156786.xyz",
+      "server_port": 826,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "1sg0001.156786.xyz"
+      }
+    },
+    {
+      "tag": "新加坡|02直连2快",
+      "server": "2sg002ff0f283d-2433-bbbe-4d7a-59990b8b8b74.233235.xyz",
+      "server_port": 816,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "2sg002ff0f283d-2433-bbbe-4d7a-59990b8b8b74.233235.xyz"
+      }
+    },
+    {
+      "tag": "新加坡02直连快",
+      "server": "2sgmax02.156786.xyz",
+      "server_port": 829,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "2sgmax02.156786.xyz"
+      }
+    },
+    {
+      "tag": "日本1直连快",
+      "server": "1jp001.156786.xyz",
+      "server_port": 821,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "1jp001.156786.xyz"
+      }
+    },
+    {
+      "tag": "新加坡01直连快",
+      "server": "sssg001.156786.xyz",
+      "server_port": 822,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "sssg001.156786.xyz"
+      }
+    },
+    {
+      "tag": "新加坡|03直连快",
+      "server": "2sg03.170809.xyz",
+      "server_port": 912,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "2sg03.170809.xyz"
+      }
+    },
+    {
+      "tag": "新加坡2直连",
+      "server": "0sgmax02.170203.xyz",
+      "server_port": 811,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "0sgmax02.170203.xyz"
+      }
+    },
+    {
+      "tag": "日本H01直连Hysteria2",
+      "server": "hyfnjp01.156786.xyz",
+      "server_port": 8081,
+      "type": "hysteria2",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "hyfnjp01.156786.xyz"
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "tag": "新加坡|01直连Hysteria2快",
+      "server": "1sg002.156786.xyz",
+      "server_port": 8080,
+      "type": "hysteria2",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "1sg002.156786.xyz"
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "tag": "新加坡H01直连Hysteria2",
+      "server": "hyfnsg01.156786.xyz",
+      "server_port": 8080,
+      "type": "hysteria2",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "hyfnsg01.156786.xyz"
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "tag": "新加坡|02直连Hysteria2",
+      "server": "2sg1109303e88-c58a-94b1-d177-f0dee4367ea5.170203.xyz",
+      "server_port": 8080,
+      "type": "hysteria2",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "2sg1109303e88-c58a-94b1-d177-f0dee4367ea5.170203.xyz"
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "tag": "新加坡03直连Hysteria2",
+      "server": "sg003981958a8-15fb-e3c0-b4a1-1f8ce65a6bac.233235.xyz",
+      "server_port": 8080,
+      "type": "hysteria2",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "sg003981958a8-15fb-e3c0-b4a1-1f8ce65a6bac.233235.xyz"
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "tag": "新加坡|09|直连Hysteria2",
+      "server": "2sgmax09.170809.xyz",
+      "server_port": 8080,
+      "type": "hysteria2",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "2sgmax09.170809.xyz"
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "tag": "新加坡09直连Hysteria2",
+      "server": "hyfnsg09.156786.xyz",
+      "server_port": 8080,
+      "type": "hysteria2",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "hyfnsg09.156786.xyz"
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "tag": "新加坡|06直连Hysteria2",
+      "server": "2ru04d7b1648e-9312-203c-8784-442475d42f1f.233235.xyz",
+      "server_port": 8080,
+      "type": "hysteria2",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "2ru04d7b1648e-9312-203c-8784-442475d42f1f.233235.xyz"
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "tag": "日本H04直连Hysteria2",
+      "server": "hyfnjp04.156786.xyz",
+      "server_port": 8080,
+      "type": "hysteria2",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "hyfnjp04.156786.xyz"
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "tag": "日本H02直连Hysteria2",
+      "server": "1jp003.156786.xyz",
+      "server_port": 8081,
+      "type": "hysteria2",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "1jp003.156786.xyz"
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "tag": "日本H05直连Hysteria2",
+      "server": "1jp01.156786.xyz",
+      "server_port": 8080,
+      "type": "hysteria2",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "1jp01.156786.xyz"
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "tag": "印度|01|直连Hysteria2",
+      "server": "in01.170203.xyz",
+      "server_port": 8080,
+      "type": "hysteria2",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "in01.170203.xyz"
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "tag": "英国|01|直连Hysteria2",
+      "server": "uk011712fbec-507b-957e-e396-77cc61a4d6f6.170203.xyz",
+      "server_port": 8080,
+      "type": "hysteria2",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "uk011712fbec-507b-957e-e396-77cc61a4d6f6.170203.xyz"
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "tag": "韩国|02|直连Hysteria2",
+      "server": "0kr02.156786.xyz",
+      "server_port": 8080,
+      "type": "hysteria2",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "0kr02.156786.xyz"
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "tag": "美国H01直连Hysteria2",
+      "server": "hyfnus01.156786.xyz",
+      "server_port": 8080,
+      "type": "hysteria2",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "hyfnus01.156786.xyz"
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "tag": "香港H03直连Hysteria2",
+      "server": "hkmax003.233235.xyz",
+      "server_port": 8080,
+      "type": "hysteria2",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "hkmax003.233235.xyz"
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "tag": "香港H07直连Hysteria2",
+      "server": "2hkmax07.170203.xyz",
+      "server_port": 8080,
+      "type": "hysteria2",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "2hkmax07.170203.xyz"
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "tag": "香港H|06|直连Hysteria2",
+      "server": "2sgmax06cf4589a1-71ec-429f-b46a-892af2259b8e.233235.xyz",
+      "server_port": 8080,
+      "type": "hysteria2",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "2sgmax06cf4589a1-71ec-429f-b46a-892af2259b8e.233235.xyz"
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "tag": "新加坡|01|直连A快",
+      "server": "3sg00017d48c58a-f335-c28a-54d2-03b96293e206.233235.xyz",
+      "server_port": 912,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "3sg00017d48c58a-f335-c28a-54d2-03b96293e206.233235.xyz"
+      }
+    },
+    {
+      "tag": "香港|01|直连快",
+      "server": "hkmax01.156786.xyz",
+      "server_port": 917,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "hkmax01.156786.xyz"
+      }
+    },
+    {
+      "tag": "香港|01|隧道",
+      "server": "twjpzz2.156786.xyz",
+      "server_port": 37107,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "2jp04162531be-29a9-2764-8627-51a5f4436fbd.233235.xyz"
+      }
+    },
+    {
+      "tag": "新加坡|05直连快",
+      "server": "1sg0519a76db6-1e89-5139-6505-56538f0d0bf2.170203.xyz",
+      "server_port": 817,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "1sg0519a76db6-1e89-5139-6505-56538f0d0bf2.170203.xyz"
+      }
+    },
+    {
+      "tag": "新加坡|01直连快",
+      "server": "2sg000001.156786.xyz",
+      "server_port": 811,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "2sg000001.156786.xyz"
+      }
+    },
+    {
+      "tag": "新加坡|04|直连A",
+      "server": "sgmax04346722a1-7a77-45b1-94b0-cb0947712830.170203.xyz",
+      "server_port": 720,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "sgmax04346722a1-7a77-45b1-94b0-cb0947712830.170203.xyz"
+      }
+    },
+    {
+      "tag": "新加坡|04直连A",
+      "server": "1sg04.170203.xyz",
+      "server_port": 718,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "1sg04.170203.xyz"
+      }
+    },
+    {
+      "tag": "台湾01直连ChatGPT3",
+      "server": "tw2.233235.xyz",
+      "server_port": 725,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "tw2.233235.xyz"
+      }
+    },
+    {
+      "tag": "台湾02直连ChatGPT3",
+      "server": "5gzdx.233235.xyz",
+      "server_port": 725,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "5gzdx.233235.xyz"
+      }
+    },
+    {
+      "tag": "台湾|01奈飞ChatGPT2",
+      "server": "2gzdx21.156786.xyz",
+      "server_port": 706,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "2gzdx21.156786.xyz"
+      }
+    },
+    {
+      "tag": "台湾|05奈飞ChatGPT4",
+      "server": "tw5.170203.xyz",
+      "server_port": 2222,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "tw5.170203.xyz"
+      }
+    },
+    {
+      "tag": "台湾02奈飞ChatGPT",
+      "server": "6gzdx2.233235.xyz",
+      "server_port": 712,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "6gzdx2.233235.xyz"
+      }
+    },
+    {
+      "tag": "台湾|04奈飞ChatGPT3",
+      "server": "sg1111.156786.xyz",
+      "server_port": 703,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "sg1111.156786.xyz"
+      }
+    },
+    {
+      "tag": "台湾|05奈飞ChatGPT5",
+      "server": "tw4.233235.xyz",
+      "server_port": 670,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "tw4.233235.xyz"
+      }
+    },
+    {
+      "tag": "台湾|02奈飞ChatGPTC",
+      "server": "tw7.170203.xyz",
+      "server_port": 811,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "tw7.170203.xyz"
+      }
+    },
+    {
+      "tag": "台湾|03奈飞ChatGPTC",
+      "server": "tw3.233235.xyz",
+      "server_port": 11125,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "tw3.233235.xyz"
+      }
+    },
+    {
+      "tag": "台湾|02奈飞ChatGPT0",
+      "server": "tw1.170203.xyz",
+      "server_port": 6678,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "tw1.170203.xyz"
+      }
+    },
+    {
+      "tag": "台湾|03奈飞ChatGPT1",
+      "server": "tw60.233235.xyz",
+      "server_port": 703,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "tw60.233235.xyz"
+      }
+    },
+    {
+      "tag": "美国|05奈飞ChatGPT0",
+      "server": "twjpzz2.156786.xyz",
+      "server_port": 30752,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "usmax05.170203.xyz"
+      }
+    },
+    {
+      "tag": "新加坡|04直连5",
+      "server": "4sgmax02.156786.xyz",
+      "server_port": 718,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "4sgmax02.156786.xyz"
+      }
+    },
+    {
+      "tag": "日本|05|直连快",
+      "server": "2jpmax05.233235.xyz",
+      "server_port": 823,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "2jpmax05.233235.xyz"
+      }
+    },
+    {
+      "tag": "日本2直连快",
+      "server": "1jpmax05.156786.xyz",
+      "server_port": 825,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "1jpmax05.156786.xyz"
+      }
+    },
+    {
+      "tag": "日本4隧道快",
+      "server": "twjpzz.156786.xyz",
+      "server_port": 13608,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "2jp04162531be-29a9-2764-8627-51a5f4436fbd.233235.xyz"
+      }
+    },
+    {
+      "tag": "新加坡01奈飞ChatGPT",
+      "server": "twjpzz2.156786.xyz",
+      "server_port": 47892,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "sg0003.170203.xyz"
+      }
+    },
+    {
+      "tag": "新加坡02奈飞ChatGPT",
+      "server": "twjpzz.156786.xyz",
+      "server_port": 54904,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "sg0003.170203.xyz"
+      }
+    },
+    {
+      "tag": "香港01奈飞ChatGPT",
+      "server": "twjpzz2.156786.xyz",
+      "server_port": 55428,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "hkmax04.170203.xyz"
+      }
+    },
+    {
+      "tag": "香港02奈飞ChatGPT",
+      "server": "twjpzz.156786.xyz",
+      "server_port": 53015,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "hkmax04.170203.xyz"
+      }
+    },
+    {
+      "tag": "美国|02隧道",
+      "server": "twjpzz2.156786.xyz",
+      "server_port": 35602,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "2usmax01.170203.xyz"
+      }
+    },
+    {
+      "tag": "美国|02隧道2",
+      "server": "twjpzz.156786.xyz",
+      "server_port": 29113,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "2usmax01.170203.xyz"
+      }
+    },
+    {
+      "tag": "电报群https://t.me/feiniaoyunjichang",
+      "server": "2sg13cb2b6b4d-9b32-01a8-7574-376a171bb832.170203.xyz",
+      "server_port": 820,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "2sg13cb2b6b4d-9b32-01a8-7574-376a171bb832.170203.xyz"
+      }
+    },
+    {
+      "tag": "美国|03奈飞ChatGPT1",
+      "server": "twjpzz2.156786.xyz",
+      "server_port": 20263,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "usmax03.170203.xyz"
+      }
+    },
+    {
+      "tag": "美国|03奈飞ChatGPT快",
+      "server": "twjpzz.156786.xyz",
+      "server_port": 63639,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "usmax03.170203.xyz"
+      }
+    },
+    {
+      "tag": "美国|05奈飞ChatGPT快",
+      "server": "twjpzz.156786.xyz",
+      "server_port": 28033,
+      "type": "trojan",
+      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "usmax05.170203.xyz"
+      }
+    },
+    {
+      "tag": "剩余流量：112.86 GB",
+      "server": "iepl1.097420.xyz",
+      "server_port": 25160,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "距离下次重置剩余：27 天",
+      "server": "iepl1.097420.xyz",
+      "server_port": 25160,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "套餐到期：2024-10-14",
+      "server": "iepl1.097420.xyz",
+      "server_port": 25160,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "官方群组https://t.me/cloudfishergroup",
+      "server": "iepl1.097420.xyz",
+      "server_port": 25160,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇭🇰 香港 深港IEPL中继1",
+      "server": "iepl1.097420.xyz",
+      "server_port": 25160,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇭🇰香港 深港IEPL中继2",
+      "server": "iepl1.097420.xyz",
+      "server_port": 25160,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇭🇰香港 沪日IEPL中继3",
+      "server": "iepl2.097420.xyz",
+      "server_port": 25160,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇭🇰香港 沪日IEPL中继4",
+      "server": "iepl2.097420.xyz",
+      "server_port": 25160,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇭🇰香港广移中继 备用",
+      "server": "zhongzhuan.centos.sh",
+      "server_port": 25160,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇨🇳台湾 深港IEPL中继1",
+      "server": "iepl1.097420.xyz",
+      "server_port": 29181,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇨🇳台湾 深港IEPL中继2",
+      "server": "iepl1.097420.xyz",
+      "server_port": 29181,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇨🇳台湾 沪日IEPL中继3",
+      "server": "iepl2.097420.xyz",
+      "server_port": 29181,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇨🇳台湾 沪日IEPL中继4",
+      "server": "iepl2.097420.xyz",
+      "server_port": 29181,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇨🇳台湾 广移中继 备用",
+      "server": "zhongzhuan.centos.sh",
+      "server_port": 29181,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇯🇵日本 深港IEPL中继1",
+      "server": "iepl1.097420.xyz",
+      "server_port": 33223,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇯🇵日本 深港IEPL中继2",
+      "server": "iepl1.097420.xyz",
+      "server_port": 33223,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇯🇵日本 沪日IEPL中继3",
+      "server": "iepl2.097420.xyz",
+      "server_port": 33223,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇯🇵日本 沪日IEPL中继4",
+      "server": "iepl2.097420.xyz",
+      "server_port": 33223,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇯🇵日本 广移中继 备用",
+      "server": "zhongzhuan.centos.sh",
+      "server_port": 33223,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇸🇬新加坡 深港IEPL中继1",
+      "server": "iepl1.097420.xyz",
+      "server_port": 18971,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇸🇬新加坡 深港IEPL中继2",
+      "server": "iepl1.097420.xyz",
+      "server_port": 18971,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇸🇬新加坡 沪日IEPL中继3",
+      "server": "iepl2.097420.xyz",
+      "server_port": 18971,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇸🇬新加坡 沪日IEPL中继4",
+      "server": "iepl2.097420.xyz",
+      "server_port": 18971,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇸🇬新加坡 广移中继 备用",
+      "server": "zhongzhuan.centos.sh",
+      "server_port": 18971,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇺🇸美国  深港IEPL中继1",
+      "server": "iepl1.097420.xyz",
+      "server_port": 31818,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇺🇸美国  深港IEPL中继2",
+      "server": "iepl1.097420.xyz",
+      "server_port": 31818,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇺🇸美国  沪日IEPL中继3",
+      "server": "iepl2.097420.xyz",
+      "server_port": 31818,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇺🇸美国  沪日IEPL中继4",
+      "server": "iepl2.097420.xyz",
+      "server_port": 31818,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇺🇸美国 广移中继 备用",
+      "server": "zhongzhuan.centos.sh",
+      "server_port": 31818,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇰🇷韩国 首尔 IEPL实验性中继",
+      "server": "iepl1.097420.xyz",
+      "server_port": 28782,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇦🇺澳大利亚 悉尼 IEPL实验性中继",
+      "server": "iepl1.097420.xyz",
+      "server_port": 27074,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇮🇳印度 孟买 IEPL实验性中继",
+      "server": "iepl1.097420.xyz",
+      "server_port": 19729,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇨🇦加拿大 蒙特利尔 IEPL实验性中继",
+      "server": "iepl1.097420.xyz",
+      "server_port": 46394,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇲🇽墨西哥 克雷塔罗 IEPL实验性中继",
+      "server": "iepl1.097420.xyz",
+      "server_port": 30931,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇫🇷法国 巴黎 IEPL实验性中继",
+      "server": "iepl1.097420.xyz",
+      "server_port": 52808,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇮🇹意大利 米兰 IEPL实验性中继",
+      "server": "iepl1.097420.xyz",
+      "server_port": 12531,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇳🇱荷兰 阿姆斯特丹 IEPL实验性中继",
+      "server": "iepl1.097420.xyz",
+      "server_port": 54199,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇪🇸西班牙 马德里 IEPL实验性中继",
+      "server": "iepl1.097420.xyz",
+      "server_port": 44700,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇨🇭瑞士 苏黎世 IEPL实验性中继",
+      "server": "iepl1.097420.xyz",
+      "server_port": 18037,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇬🇧英国 伦敦 IEPL实验性中继",
+      "server": "iepl1.097420.xyz",
+      "server_port": 34285,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇮🇱以色列 耶路撒冷 IEPL实验性中继",
+      "server": "iepl1.097420.xyz",
+      "server_port": 45222,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇸🇦沙特阿拉伯 吉达 IEPL实验性中继",
+      "server": "iepl1.097420.xyz",
+      "server_port": 37529,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇿🇦南非 约翰内斯堡 IEPL实验性中继",
+      "server": "iepl1.097420.xyz",
+      "server_port": 40415,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇦🇪阿联酋 迪拜 IEPL实验性中继",
+      "server": "iepl1.097420.xyz",
+      "server_port": 56437,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇧🇷巴西 圣保罗 IEPL实验性中继",
+      "server": "iepl1.097420.xyz",
+      "server_port": 40029,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇨🇱智利 圣地亚哥 IEPL实验性中继",
+      "server": "iepl1.097420.xyz",
+      "server_port": 18579,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    },
+    {
+      "tag": "🇨🇴哥伦比亚 波哥大 IEPL实验性中继",
+      "server": "iepl1.097420.xyz",
+      "server_port": 57217,
+      "type": "shadowsocks",
+      "method": "chacha20-ietf-poly1305",
+      "password": "9fba2146-5d52-4168-8b6a-467169728a10",
+      "plugin": "",
+      "plugin_opts": ""
+    }
+  ]
+}
