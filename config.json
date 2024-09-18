@@ -313,15 +313,16 @@
     {
       "tag": "Proxy",
       "outbounds": [
-        "🌎 自动选择",
-        "渔云机场",
+        " 🌎 自动选择",
         "👆 手动选择",
-        "🇯🇵 日本",
+        " 🐦 飞鸟云机场",
+        " 🐟 渔云机场",
         "🇭🇰 香港",
-        "🇺🇸 美国",
         " 🇹🇼 台湾",
+        "🇯🇵 日本",
         " 🇸🇬 新加坡",
-        "其他地区"
+        "🇺🇸 美国",
+        " 🌐 其他地区"
       ],
       "interrupt_exist_connections": true,
       "type": "selector"
@@ -330,15 +331,16 @@
       "tag": "Youtube",
       "outbounds": [
         "Proxy",
-        "🌎 自动选择",
-        "渔云机场",
+        " 🌎 自动选择",
         "👆 手动选择",
-        "🇯🇵 日本",
+        " 🐦 飞鸟云机场",
+        " 🐟 渔云机场",
         "🇭🇰 香港",
-        "🇺🇸 美国",
         " 🇹🇼 台湾",
+        "🇯🇵 日本",
         " 🇸🇬 新加坡",
-        "其他地区"
+        "🇺🇸 美国",
+        " 🌐 其他地区"
       ],
       "interrupt_exist_connections": true,
       "type": "selector"
@@ -347,15 +349,16 @@
       "tag": "Telegram",
       "outbounds": [
         "Proxy",
-        "🌎 自动选择",
-        "渔云机场",
+        " 🌎 自动选择",
         "👆 手动选择",
-        "🇯🇵 日本",
+        " 🐦 飞鸟云机场",
+        " 🐟 渔云机场",
         "🇭🇰 香港",
-        "🇺🇸 美国",
         " 🇹🇼 台湾",
+        "🇯🇵 日本",
         " 🇸🇬 新加坡",
-        "其他地区"
+        "🇺🇸 美国",
+        " 🌐 其他地区"
       ],
       "interrupt_exist_connections": true,
       "type": "selector"
@@ -364,15 +367,16 @@
       "tag": "Github",
       "outbounds": [
         "Proxy",
-        "🌎 自动选择",
-        "渔云机场",
+        " 🌎 自动选择",
         "👆 手动选择",
-        "🇯🇵 日本",
+        " 🐦 飞鸟云机场",
+        " 🐟 渔云机场",
         "🇭🇰 香港",
-        "🇺🇸 美国",
         " 🇹🇼 台湾",
+        "🇯🇵 日本",
         " 🇸🇬 新加坡",
-        "其他地区"
+        "🇺🇸 美国",
+        " 🌐 其他地区"
       ],
       "interrupt_exist_connections": true,
       "type": "selector"
@@ -381,15 +385,16 @@
       "tag": "Openai",
       "outbounds": [
         "Proxy",
-        "🌎 自动选择",
-        "渔云机场",
+        " 🌎 自动选择",
         "👆 手动选择",
-        "🇯🇵 日本",
+        " 🐦 飞鸟云机场",
+        " 🐟 渔云机场",
         "🇭🇰 香港",
-        "🇺🇸 美国",
         " 🇹🇼 台湾",
+        "🇯🇵 日本",
         " 🇸🇬 新加坡",
-        "其他地区"
+        "🇺🇸 美国",
+        " 🌐 其他地区"
       ],
       "interrupt_exist_connections": true,
       "type": "selector"
@@ -398,15 +403,16 @@
       "tag": "Netflix",
       "outbounds": [
         "Proxy",
-        "🌎 自动选择",
-        "渔云机场",
+        " 🌎 自动选择",
         "👆 手动选择",
-        "🇯🇵 日本",
+        " 🐦 飞鸟云机场",
+        " 🐟 渔云机场",
         "🇭🇰 香港",
-        "🇺🇸 美国",
         " 🇹🇼 台湾",
+        "🇯🇵 日本",
         " 🇸🇬 新加坡",
-        "其他地区"
+        "🇺🇸 美国",
+        " 🌐 其他地区"
       ],
       "interrupt_exist_connections": true,
       "type": "selector"
@@ -415,21 +421,22 @@
       "tag": "Google",
       "outbounds": [
         "Proxy",
-        "🌎 自动选择",
-        "渔云机场",
+        " 🌎 自动选择",
         "👆 手动选择",
-        "🇯🇵 日本",
+        " 🐦 飞鸟云机场",
+        " 🐟 渔云机场",
         "🇭🇰 香港",
-        "🇺🇸 美国",
         " 🇹🇼 台湾",
+        "🇯🇵 日本",
         " 🇸🇬 新加坡",
-        "其他地区"
+        "🇺🇸 美国",
+        " 🌐 其他地区"
       ],
       "interrupt_exist_connections": true,
       "type": "selector"
     },
     {
-      "tag": "🌎 自动选择",
+      "tag": " 🌎 自动选择",
       "outbounds": [
         "新加坡|02|直连快",
         "新加坡|01|直连快",
@@ -438,29 +445,19 @@
         "日本1直连快",
         "新加坡01直连快",
         "新加坡|03直连快",
-        "新加坡2直连",
         "日本H01直连Hysteria2",
         "新加坡|01直连Hysteria2快",
         "新加坡H01直连Hysteria2",
-        "新加坡|02直连Hysteria2",
         "新加坡03直连Hysteria2",
-        "新加坡|09|直连Hysteria2",
-        "新加坡09直连Hysteria2",
         "新加坡|06直连Hysteria2",
-        "日本H04直连Hysteria2",
-        "日本H02直连Hysteria2",
-        "日本H05直连Hysteria2",
         "印度|01|直连Hysteria2",
         "英国|01|直连Hysteria2",
         "韩国|02|直连Hysteria2",
         "美国H01直连Hysteria2",
-        "香港H03直连Hysteria2",
-        "香港H07直连Hysteria2",
         "香港H|06|直连Hysteria2",
         "新加坡|01|直连A快",
         "香港|01|直连快",
         "香港|01|隧道",
-        "新加坡|05直连快",
         "新加坡|01直连快",
         "新加坡|04|直连A",
         "新加坡|04直连A",
@@ -489,7 +486,7 @@
         "美国|03奈飞ChatGPT1",
         "美国|03奈飞ChatGPT快",
         "美国|05奈飞ChatGPT快",
-        "🇭🇰 香港 深港IEPL中继1",
+        "🇭🇰香港 深港IEPL中继1",
         "🇭🇰香港 深港IEPL中继2",
         "🇭🇰香港 沪日IEPL中继3",
         "🇭🇰香港 沪日IEPL中继4",
@@ -514,79 +511,27 @@
         "🇺🇸美国  沪日IEPL中继3",
         "🇺🇸美国  沪日IEPL中继4",
         "🇺🇸美国 广移中继 备用",
-        "🇰🇷韩国 首尔 IEPL实验性中继",
-        "🇦🇺澳大利亚 悉尼 IEPL实验性中继",
-        "🇮🇳印度 孟买 IEPL实验性中继",
-        "🇨🇦加拿大 蒙特利尔 IEPL实验性中继",
-        "🇲🇽墨西哥 克雷塔罗 IEPL实验性中继",
-        "🇫🇷法国 巴黎 IEPL实验性中继",
-        "🇮🇹意大利 米兰 IEPL实验性中继",
-        "🇳🇱荷兰 阿姆斯特丹 IEPL实验性中继",
-        "🇪🇸西班牙 马德里 IEPL实验性中继",
-        "🇨🇭瑞士 苏黎世 IEPL实验性中继",
-        "🇬🇧英国 伦敦 IEPL实验性中继",
-        "🇮🇱以色列 耶路撒冷 IEPL实验性中继",
-        "🇸🇦沙特阿拉伯 吉达 IEPL实验性中继",
-        "🇿🇦南非 约翰内斯堡 IEPL实验性中继",
-        "🇦🇪阿联酋 迪拜 IEPL实验性中继",
-        "🇧🇷巴西 圣保罗 IEPL实验性中继",
-        "🇨🇱智利 圣地亚哥 IEPL实验性中继",
-        "🇨🇴哥伦比亚 波哥大 IEPL实验性中继"
+        "🇰🇷韩国 01",
+        "🇦🇺澳大利亚 01",
+        "🇮🇳印度 01",
+        "🇨🇦加拿大 01",
+        "🇲🇽墨西哥 01",
+        "🇫🇷法国 01",
+        "🇮🇹意大利 01",
+        "🇳🇱荷兰 01",
+        "🇪🇸西班牙 01",
+        "🇨🇭瑞士 01",
+        "🇬🇧英国 01",
+        "🇮🇱以色列 01",
+        "🇸🇦沙特阿拉伯 01",
+        "🇿🇦南非 01",
+        "🇦🇪阿联酋 01",
+        "🇧🇷巴西 01",
+        "🇨🇱智利 01",
+        "🇨🇴哥伦比亚 01"
       ],
       "type": "urltest",
-      "url": "http://cp.cloudflare.com/",
-      "tolerance": 50,
-      "interrupt_exist_connections": false
-    },
-    {
-      "tag": "渔云机场",
-      "outbounds": [
-        "🇭🇰 香港 深港IEPL中继1",
-        "🇭🇰香港 深港IEPL中继2",
-        "🇭🇰香港 沪日IEPL中继3",
-        "🇭🇰香港 沪日IEPL中继4",
-        "🇭🇰香港广移中继 备用",
-        "🇨🇳台湾 深港IEPL中继1",
-        "🇨🇳台湾 深港IEPL中继2",
-        "🇨🇳台湾 沪日IEPL中继3",
-        "🇨🇳台湾 沪日IEPL中继4",
-        "🇨🇳台湾 广移中继 备用",
-        "🇯🇵日本 深港IEPL中继1",
-        "🇯🇵日本 深港IEPL中继2",
-        "🇯🇵日本 沪日IEPL中继3",
-        "🇯🇵日本 沪日IEPL中继4",
-        "🇯🇵日本 广移中继 备用",
-        "🇸🇬新加坡 深港IEPL中继1",
-        "🇸🇬新加坡 深港IEPL中继2",
-        "🇸🇬新加坡 沪日IEPL中继3",
-        "🇸🇬新加坡 沪日IEPL中继4",
-        "🇸🇬新加坡 广移中继 备用",
-        "🇺🇸美国  深港IEPL中继1",
-        "🇺🇸美国  深港IEPL中继2",
-        "🇺🇸美国  沪日IEPL中继3",
-        "🇺🇸美国  沪日IEPL中继4",
-        "🇺🇸美国 广移中继 备用",
-        "🇰🇷韩国 首尔 IEPL实验性中继",
-        "🇦🇺澳大利亚 悉尼 IEPL实验性中继",
-        "🇮🇳印度 孟买 IEPL实验性中继",
-        "🇨🇦加拿大 蒙特利尔 IEPL实验性中继",
-        "🇲🇽墨西哥 克雷塔罗 IEPL实验性中继",
-        "🇫🇷法国 巴黎 IEPL实验性中继",
-        "🇮🇹意大利 米兰 IEPL实验性中继",
-        "🇳🇱荷兰 阿姆斯特丹 IEPL实验性中继",
-        "🇪🇸西班牙 马德里 IEPL实验性中继",
-        "🇨🇭瑞士 苏黎世 IEPL实验性中继",
-        "🇬🇧英国 伦敦 IEPL实验性中继",
-        "🇮🇱以色列 耶路撒冷 IEPL实验性中继",
-        "🇸🇦沙特阿拉伯 吉达 IEPL实验性中继",
-        "🇿🇦南非 约翰内斯堡 IEPL实验性中继",
-        "🇦🇪阿联酋 迪拜 IEPL实验性中继",
-        "🇧🇷巴西 圣保罗 IEPL实验性中继",
-        "🇨🇱智利 圣地亚哥 IEPL实验性中继",
-        "🇨🇴哥伦比亚 波哥大 IEPL实验性中继"
-      ],
-      "type": "urltest",
-      "url": "http://cp.cloudflare.com/",
+      "url": "https://www.gstatic.com/generate_204",
       "tolerance": 50,
       "interrupt_exist_connections": false
     },
@@ -600,29 +545,19 @@
         "日本1直连快",
         "新加坡01直连快",
         "新加坡|03直连快",
-        "新加坡2直连",
         "日本H01直连Hysteria2",
         "新加坡|01直连Hysteria2快",
         "新加坡H01直连Hysteria2",
-        "新加坡|02直连Hysteria2",
         "新加坡03直连Hysteria2",
-        "新加坡|09|直连Hysteria2",
-        "新加坡09直连Hysteria2",
         "新加坡|06直连Hysteria2",
-        "日本H04直连Hysteria2",
-        "日本H02直连Hysteria2",
-        "日本H05直连Hysteria2",
         "印度|01|直连Hysteria2",
         "英国|01|直连Hysteria2",
         "韩国|02|直连Hysteria2",
         "美国H01直连Hysteria2",
-        "香港H03直连Hysteria2",
-        "香港H07直连Hysteria2",
         "香港H|06|直连Hysteria2",
         "新加坡|01|直连A快",
         "香港|01|直连快",
         "香港|01|隧道",
-        "新加坡|05直连快",
         "新加坡|01直连快",
         "新加坡|04|直连A",
         "新加坡|04直连A",
@@ -651,7 +586,7 @@
         "美国|03奈飞ChatGPT1",
         "美国|03奈飞ChatGPT快",
         "美国|05奈飞ChatGPT快",
-        "🇭🇰 香港 深港IEPL中继1",
+        "🇭🇰香港 深港IEPL中继1",
         "🇭🇰香港 深港IEPL中继2",
         "🇭🇰香港 沪日IEPL中继3",
         "🇭🇰香港 沪日IEPL中继4",
@@ -676,89 +611,153 @@
         "🇺🇸美国  沪日IEPL中继3",
         "🇺🇸美国  沪日IEPL中继4",
         "🇺🇸美国 广移中继 备用",
-        "🇰🇷韩国 首尔 IEPL实验性中继",
-        "🇦🇺澳大利亚 悉尼 IEPL实验性中继",
-        "🇮🇳印度 孟买 IEPL实验性中继",
-        "🇨🇦加拿大 蒙特利尔 IEPL实验性中继",
-        "🇲🇽墨西哥 克雷塔罗 IEPL实验性中继",
-        "🇫🇷法国 巴黎 IEPL实验性中继",
-        "🇮🇹意大利 米兰 IEPL实验性中继",
-        "🇳🇱荷兰 阿姆斯特丹 IEPL实验性中继",
-        "🇪🇸西班牙 马德里 IEPL实验性中继",
-        "🇨🇭瑞士 苏黎世 IEPL实验性中继",
-        "🇬🇧英国 伦敦 IEPL实验性中继",
-        "🇮🇱以色列 耶路撒冷 IEPL实验性中继",
-        "🇸🇦沙特阿拉伯 吉达 IEPL实验性中继",
-        "🇿🇦南非 约翰内斯堡 IEPL实验性中继",
-        "🇦🇪阿联酋 迪拜 IEPL实验性中继",
-        "🇧🇷巴西 圣保罗 IEPL实验性中继",
-        "🇨🇱智利 圣地亚哥 IEPL实验性中继",
-        "🇨🇴哥伦比亚 波哥大 IEPL实验性中继"
+        "🇰🇷韩国 01",
+        "🇦🇺澳大利亚 01",
+        "🇮🇳印度 01",
+        "🇨🇦加拿大 01",
+        "🇲🇽墨西哥 01",
+        "🇫🇷法国 01",
+        "🇮🇹意大利 01",
+        "🇳🇱荷兰 01",
+        "🇪🇸西班牙 01",
+        "🇨🇭瑞士 01",
+        "🇬🇧英国 01",
+        "🇮🇱以色列 01",
+        "🇸🇦沙特阿拉伯 01",
+        "🇿🇦南非 01",
+        "🇦🇪阿联酋 01",
+        "🇧🇷巴西 01",
+        "🇨🇱智利 01",
+        "🇨🇴哥伦比亚 01"
       ],
       "interrupt_exist_connections": true,
       "type": "selector"
     },
     {
-      "tag": "🇯🇵 日本",
+      "tag": " 🐦 飞鸟云机场",
       "outbounds": [
+        "新加坡|02|直连快",
+        "新加坡|01|直连快",
+        "新加坡|02直连2快",
+        "新加坡02直连快",
         "日本1直连快",
+        "新加坡01直连快",
+        "新加坡|03直连快",
         "日本H01直连Hysteria2",
-        "日本H04直连Hysteria2",
-        "日本H02直连Hysteria2",
-        "日本H05直连Hysteria2",
+        "新加坡|01直连Hysteria2快",
+        "新加坡H01直连Hysteria2",
+        "新加坡03直连Hysteria2",
+        "新加坡|06直连Hysteria2",
+        "印度|01|直连Hysteria2",
+        "英国|01|直连Hysteria2",
+        "韩国|02|直连Hysteria2",
+        "美国H01直连Hysteria2",
+        "香港H|06|直连Hysteria2",
+        "新加坡|01|直连A快",
+        "香港|01|直连快",
+        "香港|01|隧道",
+        "新加坡|01直连快",
+        "新加坡|04|直连A",
+        "新加坡|04直连A",
+        "台湾01直连ChatGPT3",
+        "台湾02直连ChatGPT3",
+        "台湾|01奈飞ChatGPT2",
+        "台湾|05奈飞ChatGPT4",
+        "台湾02奈飞ChatGPT",
+        "台湾|04奈飞ChatGPT3",
+        "台湾|05奈飞ChatGPT5",
+        "台湾|02奈飞ChatGPTC",
+        "台湾|03奈飞ChatGPTC",
+        "台湾|02奈飞ChatGPT0",
+        "台湾|03奈飞ChatGPT1",
+        "美国|05奈飞ChatGPT0",
+        "新加坡|04直连5",
         "日本|05|直连快",
         "日本2直连快",
         "日本4隧道快",
+        "新加坡01奈飞ChatGPT",
+        "新加坡02奈飞ChatGPT",
+        "香港01奈飞ChatGPT",
+        "香港02奈飞ChatGPT",
+        "美国|02隧道",
+        "美国|02隧道2",
+        "美国|03奈飞ChatGPT1",
+        "美国|03奈飞ChatGPT快",
+        "美国|05奈飞ChatGPT快"
+      ],
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204",
+      "tolerance": 50,
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": " 🐟 渔云机场",
+      "outbounds": [
+        "🇭🇰香港 深港IEPL中继1",
+        "🇭🇰香港 深港IEPL中继2",
+        "🇭🇰香港 沪日IEPL中继3",
+        "🇭🇰香港 沪日IEPL中继4",
+        "🇭🇰香港广移中继 备用",
+        "🇨🇳台湾 深港IEPL中继1",
+        "🇨🇳台湾 深港IEPL中继2",
+        "🇨🇳台湾 沪日IEPL中继3",
+        "🇨🇳台湾 沪日IEPL中继4",
+        "🇨🇳台湾 广移中继 备用",
         "🇯🇵日本 深港IEPL中继1",
         "🇯🇵日本 深港IEPL中继2",
         "🇯🇵日本 沪日IEPL中继3",
         "🇯🇵日本 沪日IEPL中继4",
-        "🇯🇵日本 广移中继 备用"
+        "🇯🇵日本 广移中继 备用",
+        "🇸🇬新加坡 深港IEPL中继1",
+        "🇸🇬新加坡 深港IEPL中继2",
+        "🇸🇬新加坡 沪日IEPL中继3",
+        "🇸🇬新加坡 沪日IEPL中继4",
+        "🇸🇬新加坡 广移中继 备用",
+        "🇺🇸美国  深港IEPL中继1",
+        "🇺🇸美国  深港IEPL中继2",
+        "🇺🇸美国  沪日IEPL中继3",
+        "🇺🇸美国  沪日IEPL中继4",
+        "🇺🇸美国 广移中继 备用",
+        "🇰🇷韩国 01",
+        "🇦🇺澳大利亚 01",
+        "🇮🇳印度 01",
+        "🇨🇦加拿大 01",
+        "🇲🇽墨西哥 01",
+        "🇫🇷法国 01",
+        "🇮🇹意大利 01",
+        "🇳🇱荷兰 01",
+        "🇪🇸西班牙 01",
+        "🇨🇭瑞士 01",
+        "🇬🇧英国 01",
+        "🇮🇱以色列 01",
+        "🇸🇦沙特阿拉伯 01",
+        "🇿🇦南非 01",
+        "🇦🇪阿联酋 01",
+        "🇧🇷巴西 01",
+        "🇨🇱智利 01",
+        "🇨🇴哥伦比亚 01"
       ],
       "type": "urltest",
-      "url": "http://cp.cloudflare.com/",
+      "url": "https://www.gstatic.com/generate_204",
       "tolerance": 50,
       "interrupt_exist_connections": false
     },
     {
       "tag": "🇭🇰 香港",
       "outbounds": [
-        "香港H03直连Hysteria2",
-        "香港H07直连Hysteria2",
         "香港H|06|直连Hysteria2",
         "香港|01|直连快",
         "香港|01|隧道",
         "香港01奈飞ChatGPT",
         "香港02奈飞ChatGPT",
-        "🇭🇰 香港 深港IEPL中继1",
+        "🇭🇰香港 深港IEPL中继1",
         "🇭🇰香港 深港IEPL中继2",
         "🇭🇰香港 沪日IEPL中继3",
         "🇭🇰香港 沪日IEPL中继4",
         "🇭🇰香港广移中继 备用"
       ],
       "type": "urltest",
-      "url": "http://cp.cloudflare.com/",
-      "tolerance": 50,
-      "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇺🇸 美国",
-      "outbounds": [
-        "美国H01直连Hysteria2",
-        "美国|05奈飞ChatGPT0",
-        "美国|02隧道",
-        "美国|02隧道2",
-        "美国|03奈飞ChatGPT1",
-        "美国|03奈飞ChatGPT快",
-        "美国|05奈飞ChatGPT快",
-        "🇺🇸美国  深港IEPL中继1",
-        "🇺🇸美国  深港IEPL中继2",
-        "🇺🇸美国  沪日IEPL中继3",
-        "🇺🇸美国  沪日IEPL中继4",
-        "🇺🇸美国 广移中继 备用"
-      ],
-      "type": "urltest",
-      "url": "http://cp.cloudflare.com/",
+      "url": "https://www.gstatic.com/generate_204",
       "tolerance": 50,
       "interrupt_exist_connections": false
     },
@@ -783,7 +782,26 @@
         "🇨🇳台湾 广移中继 备用"
       ],
       "type": "urltest",
-      "url": "http://cp.cloudflare.com/",
+      "url": "https://www.gstatic.com/generate_204",
+      "tolerance": 50,
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇯🇵 日本",
+      "outbounds": [
+        "日本1直连快",
+        "日本H01直连Hysteria2",
+        "日本|05|直连快",
+        "日本2直连快",
+        "日本4隧道快",
+        "🇯🇵日本 深港IEPL中继1",
+        "🇯🇵日本 深港IEPL中继2",
+        "🇯🇵日本 沪日IEPL中继3",
+        "🇯🇵日本 沪日IEPL中继4",
+        "🇯🇵日本 广移中继 备用"
+      ],
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204",
       "tolerance": 50,
       "interrupt_exist_connections": false
     },
@@ -796,16 +814,11 @@
         "新加坡02直连快",
         "新加坡01直连快",
         "新加坡|03直连快",
-        "新加坡2直连",
         "新加坡|01直连Hysteria2快",
         "新加坡H01直连Hysteria2",
-        "新加坡|02直连Hysteria2",
         "新加坡03直连Hysteria2",
-        "新加坡|09|直连Hysteria2",
-        "新加坡09直连Hysteria2",
         "新加坡|06直连Hysteria2",
         "新加坡|01|直连A快",
-        "新加坡|05直连快",
         "新加坡|01直连快",
         "新加坡|04|直连A",
         "新加坡|04直连A",
@@ -819,37 +832,58 @@
         "🇸🇬新加坡 广移中继 备用"
       ],
       "type": "urltest",
-      "url": "http://cp.cloudflare.com/",
+      "url": "https://www.gstatic.com/generate_204",
       "tolerance": 50,
       "interrupt_exist_connections": false
     },
     {
-      "tag": "其他地区",
+      "tag": "🇺🇸 美国",
+      "outbounds": [
+        "美国H01直连Hysteria2",
+        "美国|05奈飞ChatGPT0",
+        "美国|02隧道",
+        "美国|02隧道2",
+        "美国|03奈飞ChatGPT1",
+        "美国|03奈飞ChatGPT快",
+        "美国|05奈飞ChatGPT快",
+        "🇺🇸美国  深港IEPL中继1",
+        "🇺🇸美国  深港IEPL中继2",
+        "🇺🇸美国  沪日IEPL中继3",
+        "🇺🇸美国  沪日IEPL中继4",
+        "🇺🇸美国 广移中继 备用"
+      ],
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204",
+      "tolerance": 50,
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": " 🌐 其他地区",
       "outbounds": [
         "印度|01|直连Hysteria2",
         "英国|01|直连Hysteria2",
         "韩国|02|直连Hysteria2",
-        "🇰🇷韩国 首尔 IEPL实验性中继",
-        "🇦🇺澳大利亚 悉尼 IEPL实验性中继",
-        "🇮🇳印度 孟买 IEPL实验性中继",
-        "🇨🇦加拿大 蒙特利尔 IEPL实验性中继",
-        "🇲🇽墨西哥 克雷塔罗 IEPL实验性中继",
-        "🇫🇷法国 巴黎 IEPL实验性中继",
-        "🇮🇹意大利 米兰 IEPL实验性中继",
-        "🇳🇱荷兰 阿姆斯特丹 IEPL实验性中继",
-        "🇪🇸西班牙 马德里 IEPL实验性中继",
-        "🇨🇭瑞士 苏黎世 IEPL实验性中继",
-        "🇬🇧英国 伦敦 IEPL实验性中继",
-        "🇮🇱以色列 耶路撒冷 IEPL实验性中继",
-        "🇸🇦沙特阿拉伯 吉达 IEPL实验性中继",
-        "🇿🇦南非 约翰内斯堡 IEPL实验性中继",
-        "🇦🇪阿联酋 迪拜 IEPL实验性中继",
-        "🇧🇷巴西 圣保罗 IEPL实验性中继",
-        "🇨🇱智利 圣地亚哥 IEPL实验性中继",
-        "🇨🇴哥伦比亚 波哥大 IEPL实验性中继"
+        "🇰🇷韩国 01",
+        "🇦🇺澳大利亚 01",
+        "🇮🇳印度 01",
+        "🇨🇦加拿大 01",
+        "🇲🇽墨西哥 01",
+        "🇫🇷法国 01",
+        "🇮🇹意大利 01",
+        "🇳🇱荷兰 01",
+        "🇪🇸西班牙 01",
+        "🇨🇭瑞士 01",
+        "🇬🇧英国 01",
+        "🇮🇱以色列 01",
+        "🇸🇦沙特阿拉伯 01",
+        "🇿🇦南非 01",
+        "🇦🇪阿联酋 01",
+        "🇧🇷巴西 01",
+        "🇨🇱智利 01",
+        "🇨🇴哥伦比亚 01"
       ],
       "type": "urltest",
-      "url": "http://cp.cloudflare.com/",
+      "url": "https://www.gstatic.com/generate_204",
       "tolerance": 50,
       "interrupt_exist_connections": false
     },
@@ -870,7 +904,7 @@
       "tag": "block"
     },
     {
-      "tag": "剩余流量：489.43 GB",
+      "tag": "剩余流量：489.09 GB",
       "server": "twjpzz.156786.xyz",
       "server_port": 63227,
       "type": "trojan",
@@ -1015,18 +1049,6 @@
       }
     },
     {
-      "tag": "新加坡2直连",
-      "server": "0sgmax02.170203.xyz",
-      "server_port": 811,
-      "type": "trojan",
-      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "0sgmax02.170203.xyz"
-      }
-    },
-    {
       "tag": "日本H01直连Hysteria2",
       "server": "hyfnjp01.156786.xyz",
       "server_port": 8081,
@@ -1066,19 +1088,6 @@
       "tcp_fast_open": false
     },
     {
-      "tag": "新加坡|02直连Hysteria2",
-      "server": "2sg1109303e88-c58a-94b1-d177-f0dee4367ea5.170203.xyz",
-      "server_port": 8080,
-      "type": "hysteria2",
-      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "2sg1109303e88-c58a-94b1-d177-f0dee4367ea5.170203.xyz"
-      },
-      "tcp_fast_open": false
-    },
-    {
       "tag": "新加坡03直连Hysteria2",
       "server": "sg003981958a8-15fb-e3c0-b4a1-1f8ce65a6bac.233235.xyz",
       "server_port": 8080,
@@ -1092,32 +1101,6 @@
       "tcp_fast_open": false
     },
     {
-      "tag": "新加坡|09|直连Hysteria2",
-      "server": "2sgmax09.170809.xyz",
-      "server_port": 8080,
-      "type": "hysteria2",
-      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "2sgmax09.170809.xyz"
-      },
-      "tcp_fast_open": false
-    },
-    {
-      "tag": "新加坡09直连Hysteria2",
-      "server": "hyfnsg09.156786.xyz",
-      "server_port": 8080,
-      "type": "hysteria2",
-      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "hyfnsg09.156786.xyz"
-      },
-      "tcp_fast_open": false
-    },
-    {
       "tag": "新加坡|06直连Hysteria2",
       "server": "2ru04d7b1648e-9312-203c-8784-442475d42f1f.233235.xyz",
       "server_port": 8080,
@@ -1127,45 +1110,6 @@
         "enabled": true,
         "insecure": false,
         "server_name": "2ru04d7b1648e-9312-203c-8784-442475d42f1f.233235.xyz"
-      },
-      "tcp_fast_open": false
-    },
-    {
-      "tag": "日本H04直连Hysteria2",
-      "server": "hyfnjp04.156786.xyz",
-      "server_port": 8080,
-      "type": "hysteria2",
-      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "hyfnjp04.156786.xyz"
-      },
-      "tcp_fast_open": false
-    },
-    {
-      "tag": "日本H02直连Hysteria2",
-      "server": "1jp003.156786.xyz",
-      "server_port": 8081,
-      "type": "hysteria2",
-      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "1jp003.156786.xyz"
-      },
-      "tcp_fast_open": false
-    },
-    {
-      "tag": "日本H05直连Hysteria2",
-      "server": "1jp01.156786.xyz",
-      "server_port": 8080,
-      "type": "hysteria2",
-      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "1jp01.156786.xyz"
       },
       "tcp_fast_open": false
     },
@@ -1222,32 +1166,6 @@
       "tcp_fast_open": false
     },
     {
-      "tag": "香港H03直连Hysteria2",
-      "server": "hkmax003.233235.xyz",
-      "server_port": 8080,
-      "type": "hysteria2",
-      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "hkmax003.233235.xyz"
-      },
-      "tcp_fast_open": false
-    },
-    {
-      "tag": "香港H07直连Hysteria2",
-      "server": "2hkmax07.170203.xyz",
-      "server_port": 8080,
-      "type": "hysteria2",
-      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "2hkmax07.170203.xyz"
-      },
-      "tcp_fast_open": false
-    },
-    {
       "tag": "香港H|06|直连Hysteria2",
       "server": "2sgmax06cf4589a1-71ec-429f-b46a-892af2259b8e.233235.xyz",
       "server_port": 8080,
@@ -1294,18 +1212,6 @@
         "enabled": true,
         "insecure": false,
         "server_name": "2jp04162531be-29a9-2764-8627-51a5f4436fbd.233235.xyz"
-      }
-    },
-    {
-      "tag": "新加坡|05直连快",
-      "server": "1sg0519a76db6-1e89-5139-6505-56538f0d0bf2.170203.xyz",
-      "server_port": 817,
-      "type": "trojan",
-      "password": "34e8e74e-b306-402c-bfa6-d608d908244a",
-      "tls": {
-        "enabled": true,
-        "insecure": false,
-        "server_name": "1sg0519a76db6-1e89-5139-6505-56538f0d0bf2.170203.xyz"
       }
     },
     {
@@ -1657,7 +1563,7 @@
       }
     },
     {
-      "tag": "剩余流量：112.86 GB",
+      "tag": "剩余流量：109.05 GB",
       "server": "iepl1.097420.xyz",
       "server_port": 25160,
       "type": "shadowsocks",
@@ -1667,7 +1573,7 @@
       "plugin_opts": ""
     },
     {
-      "tag": "距离下次重置剩余：27 天",
+      "tag": "距离下次重置剩余：26 天",
       "server": "iepl1.097420.xyz",
       "server_port": 25160,
       "type": "shadowsocks",
@@ -1697,7 +1603,7 @@
       "plugin_opts": ""
     },
     {
-      "tag": "🇭🇰 香港 深港IEPL中继1",
+      "tag": "🇭🇰香港 深港IEPL中继1",
       "server": "iepl1.097420.xyz",
       "server_port": 25160,
       "type": "shadowsocks",
@@ -1947,7 +1853,7 @@
       "plugin_opts": ""
     },
     {
-      "tag": "🇰🇷韩国 首尔 IEPL实验性中继",
+      "tag": "🇰🇷韩国 01",
       "server": "iepl1.097420.xyz",
       "server_port": 28782,
       "type": "shadowsocks",
@@ -1957,7 +1863,7 @@
       "plugin_opts": ""
     },
     {
-      "tag": "🇦🇺澳大利亚 悉尼 IEPL实验性中继",
+      "tag": "🇦🇺澳大利亚 01",
       "server": "iepl1.097420.xyz",
       "server_port": 27074,
       "type": "shadowsocks",
@@ -1967,7 +1873,7 @@
       "plugin_opts": ""
     },
     {
-      "tag": "🇮🇳印度 孟买 IEPL实验性中继",
+      "tag": "🇮🇳印度 01",
       "server": "iepl1.097420.xyz",
       "server_port": 19729,
       "type": "shadowsocks",
@@ -1977,7 +1883,7 @@
       "plugin_opts": ""
     },
     {
-      "tag": "🇨🇦加拿大 蒙特利尔 IEPL实验性中继",
+      "tag": "🇨🇦加拿大 01",
       "server": "iepl1.097420.xyz",
       "server_port": 46394,
       "type": "shadowsocks",
@@ -1987,7 +1893,7 @@
       "plugin_opts": ""
     },
     {
-      "tag": "🇲🇽墨西哥 克雷塔罗 IEPL实验性中继",
+      "tag": "🇲🇽墨西哥 01",
       "server": "iepl1.097420.xyz",
       "server_port": 30931,
       "type": "shadowsocks",
@@ -1997,7 +1903,7 @@
       "plugin_opts": ""
     },
     {
-      "tag": "🇫🇷法国 巴黎 IEPL实验性中继",
+      "tag": "🇫🇷法国 01",
       "server": "iepl1.097420.xyz",
       "server_port": 52808,
       "type": "shadowsocks",
@@ -2007,7 +1913,7 @@
       "plugin_opts": ""
     },
     {
-      "tag": "🇮🇹意大利 米兰 IEPL实验性中继",
+      "tag": "🇮🇹意大利 01",
       "server": "iepl1.097420.xyz",
       "server_port": 12531,
       "type": "shadowsocks",
@@ -2017,7 +1923,7 @@
       "plugin_opts": ""
     },
     {
-      "tag": "🇳🇱荷兰 阿姆斯特丹 IEPL实验性中继",
+      "tag": "🇳🇱荷兰 01",
       "server": "iepl1.097420.xyz",
       "server_port": 54199,
       "type": "shadowsocks",
@@ -2027,7 +1933,7 @@
       "plugin_opts": ""
     },
     {
-      "tag": "🇪🇸西班牙 马德里 IEPL实验性中继",
+      "tag": "🇪🇸西班牙 01",
       "server": "iepl1.097420.xyz",
       "server_port": 44700,
       "type": "shadowsocks",
@@ -2037,7 +1943,7 @@
       "plugin_opts": ""
     },
     {
-      "tag": "🇨🇭瑞士 苏黎世 IEPL实验性中继",
+      "tag": "🇨🇭瑞士 01",
       "server": "iepl1.097420.xyz",
       "server_port": 18037,
       "type": "shadowsocks",
@@ -2047,7 +1953,7 @@
       "plugin_opts": ""
     },
     {
-      "tag": "🇬🇧英国 伦敦 IEPL实验性中继",
+      "tag": "🇬🇧英国 01",
       "server": "iepl1.097420.xyz",
       "server_port": 34285,
       "type": "shadowsocks",
@@ -2057,7 +1963,7 @@
       "plugin_opts": ""
     },
     {
-      "tag": "🇮🇱以色列 耶路撒冷 IEPL实验性中继",
+      "tag": "🇮🇱以色列 01",
       "server": "iepl1.097420.xyz",
       "server_port": 45222,
       "type": "shadowsocks",
@@ -2067,7 +1973,7 @@
       "plugin_opts": ""
     },
     {
-      "tag": "🇸🇦沙特阿拉伯 吉达 IEPL实验性中继",
+      "tag": "🇸🇦沙特阿拉伯 01",
       "server": "iepl1.097420.xyz",
       "server_port": 37529,
       "type": "shadowsocks",
@@ -2077,7 +1983,7 @@
       "plugin_opts": ""
     },
     {
-      "tag": "🇿🇦南非 约翰内斯堡 IEPL实验性中继",
+      "tag": "🇿🇦南非 01",
       "server": "iepl1.097420.xyz",
       "server_port": 40415,
       "type": "shadowsocks",
@@ -2087,7 +1993,7 @@
       "plugin_opts": ""
     },
     {
-      "tag": "🇦🇪阿联酋 迪拜 IEPL实验性中继",
+      "tag": "🇦🇪阿联酋 01",
       "server": "iepl1.097420.xyz",
       "server_port": 56437,
       "type": "shadowsocks",
@@ -2097,7 +2003,7 @@
       "plugin_opts": ""
     },
     {
-      "tag": "🇧🇷巴西 圣保罗 IEPL实验性中继",
+      "tag": "🇧🇷巴西 01",
       "server": "iepl1.097420.xyz",
       "server_port": 40029,
       "type": "shadowsocks",
@@ -2107,7 +2013,7 @@
       "plugin_opts": ""
     },
     {
-      "tag": "🇨🇱智利 圣地亚哥 IEPL实验性中继",
+      "tag": "🇨🇱智利 01",
       "server": "iepl1.097420.xyz",
       "server_port": 18579,
       "type": "shadowsocks",
@@ -2117,7 +2023,7 @@
       "plugin_opts": ""
     },
     {
-      "tag": "🇨🇴哥伦比亚 波哥大 IEPL实验性中继",
+      "tag": "🇨🇴哥伦比亚 01",
       "server": "iepl1.097420.xyz",
       "server_port": 57217,
       "type": "shadowsocks",
