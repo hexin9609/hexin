@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain": [
+        "www.terabox.com"
+      ]
+    },
+    {
+      "domain_suffix": [
+        ".terabox.com"
+      ]
+    },
+    {
+      "domain_keyword": [
+        "terabox"
+      ]
+    }
+  ]
+}
