@@ -3,12 +3,14 @@
   "rules": [
     {
       "domain": [
-        "www.terabox.com"
+        "terabox.com",
+        "teraboxcdn.com"
       ]
     },
     {
       "domain_suffix": [
-        ".terabox.com"
+        ".terabox.com",
+        ".teraboxcdn.com"
       ]
     },
     {
