@@ -257,6 +257,108 @@
       "default": "🔄 自动选择机场"
     },
     {
+      "tag": "🔄 自动选择机场",
+      "type": "urltest",
+      "outbounds": [
+        "✈️ FlyingBird",
+        "✈️ 牛逼机场",
+        "✈️ 三分机场"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🖕 手动选择机场",
+      "type": "selector",
+      "outbounds": [
+        "✈️ 飞鸟云机场",
+        "✈️ FlyingBird",
+        "✈️ 牛逼机场",
+        "✈️ 三分机场"
+      ]
+    },
+    {
+      "tag": "✈️ FlyingBird",
+      "type": "urltest",
+      "outbounds": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "✈️ 牛逼机场",
+      "type": "urltest",
+      "outbounds": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "✈️ 三分机场",
+      "type": "urltest",
+      "outbounds": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "✈️ 飞鸟云机场",
+      "type": "urltest",
+      "outbounds": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "✔️ GPT",
+      "type": "urltest",
+      "outbounds": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🇭🇰 香港",
+      "type": "urltest",
+      "outbounds": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🇨🇳 台湾",
+      "type": "urltest",
+      "outbounds": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🇯🇵 日本",
+      "type": "urltest",
+      "outbounds": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🇸🇬 新加坡",
+      "type": "urltest",
+      "outbounds": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🌐 其它地区",
+      "type": "urltest",
+      "outbounds": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
       "tag": "google",
       "type": "selector",
       "outbounds": [
@@ -415,7 +517,7 @@
         "🌐 其它地区",
         "direct"
       ],
-      "default": "✅️ 节点选择"
+      "default": "✔️ GPT"
     },
     {
       "tag": "cn",
@@ -456,108 +558,6 @@
         "direct"
       ],
       "default": "✅️ 节点选择"
-    },
-    {
-      "tag": "🔄 自动选择机场",
-      "type": "urltest",
-      "outbounds": [
-        "✈️ FlyingBird",
-        "✈️ 牛逼机场",
-        "✈️ 三分机场"
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
-    },
-    {
-      "tag": "🖕 手动选择机场",
-      "type": "selector",
-      "outbounds": [
-        "✈️ 飞鸟云机场",
-        "✈️ FlyingBird",
-        "✈️ 牛逼机场",
-        "✈️ 三分机场"
-      ]
-    },
-    {
-      "tag": "✈️ FlyingBird",
-      "type": "urltest",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
-    },
-    {
-      "tag": "✈️ 牛逼机场",
-      "type": "urltest",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
-    },
-    {
-      "tag": "✈️ 三分机场",
-      "type": "urltest",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
-    },
-    {
-      "tag": "✈️ 飞鸟云机场",
-      "type": "urltest",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
-    },
-    {
-      "tag": "✔️ GPT",
-      "type": "urltest",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
-    },
-    {
-      "tag": "🇭🇰 香港",
-      "type": "urltest",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
-    },
-    {
-      "tag": "🇨🇳 台湾",
-      "type": "urltest",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
-    },
-    {
-      "tag": "🇯🇵 日本",
-      "type": "urltest",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
-    },
-    {
-      "tag": "🇸🇬 新加坡",
-      "type": "urltest",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
-    },
-    {
-      "tag": "🌐 其它地区",
-      "type": "urltest",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
     },
     {
       "tag": "GLOBAL",
