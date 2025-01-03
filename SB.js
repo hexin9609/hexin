@@ -28,6 +28,9 @@ config.outbounds.map(i => {
   if (['✈️ 飞鸟云机场'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /飞鸟/i))
   }
+  if (['GPT'].includes(i.tag)) {
+    i.outbounds.push(...getTags(proxies)
+  }
   if (['🇭🇰 香港'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /香港/i))
   }
@@ -42,9 +45,6 @@ config.outbounds.map(i => {
   }
   if (['🌐 其它地区'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /^(?!.*(?:香港|台湾|日本|新加坡)).*()/i))
-  }
-  if (['GPT'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies))
   }
 })
 
