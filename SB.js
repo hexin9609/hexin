@@ -44,7 +44,7 @@ config.outbounds.map(i => {
     i.outbounds.push(...getTags(proxies, /^(?!.*(?:香港|台湾|日本|新加坡)).*()/i))
   }
   if (['GPT'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /^(?!.*(?:)).*()/i))
+    i.outbounds.push(...getTags(proxies))
   }
 })
 
