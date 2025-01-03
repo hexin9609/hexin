@@ -265,8 +265,8 @@
         "✈️ 三分机场"
       ],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
+      "interval": "5m",
+      "tolerance": 1
     },
     {
       "tag": "🖕 手动选择机场",
@@ -283,80 +283,80 @@
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
+      "interval": "5m",
+      "tolerance": 1
     },
     {
       "tag": "✈️ 牛逼机场",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
+      "interval": "5m",
+      "tolerance": 1
     },
     {
       "tag": "✈️ 三分机场",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
+      "interval": "5m",
+      "tolerance": 1
     },
     {
       "tag": "✈️ 飞鸟云机场",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
+      "interval": "5m",
+      "tolerance": 1
     },
     {
       "tag": "✔️ GPT",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
+      "interval": "5m",
+      "tolerance": 1
     },
     {
       "tag": "🇭🇰 香港",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
+      "interval": "5m",
+      "tolerance": 1
     },
     {
       "tag": "🇨🇳 台湾",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
+      "interval": "5m",
+      "tolerance": 1
     },
     {
       "tag": "🇯🇵 日本",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
+      "interval": "5m",
+      "tolerance": 1
     },
     {
       "tag": "🇸🇬 新加坡",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
+      "interval": "5m",
+      "tolerance": 1
     },
     {
       "tag": "🌐 其它地区",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
+      "interval": "5m",
+      "tolerance": 1
     },
     {
       "tag": "google",
