@@ -29,7 +29,7 @@ config.outbounds.map(i => {
     i.outbounds.push(...getTags(proxies, /飞鸟/i))
   }
   if (['✔️ GPT'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /^(?!.*(?:Fly 马来|Fly 土耳其|Fly 阿根廷)).*(Fly|GPT)/i))
+    i.outbounds.push(...getTags(proxies, /^(?!.*(?:Fly 马来|Fly 土耳其|Fly 阿根廷|牛逼 台湾)).*(Fly|GPT)/i))
   }
   if (['🇭🇰 香港'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /香港/i))
