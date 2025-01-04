@@ -70,6 +70,14 @@
         "outbound": "GLOBAL"
       },
       {
+        "rule_set": "geosite-Direct",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": "geosite-Proxy",
+        "outbound": "✅️ 节点选择"
+      },
+      {
         "rule_set": "bilibili",
         "outbound": "bilibili"
       },
@@ -126,6 +134,20 @@
       }
     ],
     "rule_set": [
+      {
+        "tag": "geosite-Direct",
+        "type": "remote",
+        "format": "text",
+        "url": "https://ghgo.xyz/https://raw.githubusercontent.com/hexin9609/hexin/refs/heads/main/Direct.lise",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-Proxy",
+        "type": "remote",
+        "format": "text",
+        "url": "https://ghgo.xyz/https://raw.githubusercontent.com/hexin9609/hexin/refs/heads/main/Proxy.lise",
+        "download_detour": "direct"
+      },
       {
         "tag": "geoip-apple",
         "type": "remote",
