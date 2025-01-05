@@ -58,6 +58,10 @@
         "outbound": "dns-out"
       },
       {
+      	"port": 9696
+      	"outbound": "direct"
+      },
+      {
         "ip_is_private": true,
         "outbound": "direct"
       },
