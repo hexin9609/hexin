@@ -54,12 +54,13 @@
   "route": {
     "rules": [
       {
-        "port": 53,
-        "outbound": "dns-out"
+        "type": "field",
+        "ip": ["192.168.8.0/24"],
+        "outbound": "direct"
       },
       {
-      	"source_port": 9696,
-      	"outbound": "direct"
+        "port": 53,
+        "outbound": "dns-out"
       },
       {
         "ip_is_private": true,
