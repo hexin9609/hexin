@@ -58,7 +58,7 @@
         "outbound": "dns-out"
       },
       {
-      	"port": 9696
+      	"port": 9696,
       	"outbound": "direct"
       },
       {
