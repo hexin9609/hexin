@@ -54,10 +54,6 @@
   "route": {
     "rules": [
       {
-        "port": 9696,
-        "outbound": "direct"
-      },
-      {
         "port": 53,
         "outbound": "dns-out"
       },
@@ -75,27 +71,6 @@
       },
       {
         "domain": [
-          "galaxyappstore.com",
-          "ghgo.xyz",
-          "ghproxy.net",
-          "emby.xiaoya.pro",
-          "icyou.eu.org",
-          "lanyuewan.cn",
-          "emby.8.net.co",
-          "emby.raydoom.tk",
-          "emby.kaiserver.uk",
-          "embyxiaoya.laogl.top",
-          "emby-data.poxi1221.eu.org",
-          "emby-data.ermaokj.cn",
-          "emby-data.bdbd.fun",
-          "emby-data.wwwh.eu.org",
-          "emby-data.f1rst.top",
-          "emby-data.ymschh.top",
-          "emby-data.wx1.us.kg",
-          "emby-data.r2s.site",
-          "emby-data.neversay.eu.org",
-          "emby-data.800686.xyz",
-          "api.nn.ci",
           "961115.xyz",
           "966666.asia"
         ],
@@ -280,10 +255,10 @@
       "outbounds": [
         "🔄 自动选择机场",
         "🖕 手动选择机场",
+        "✈️ 飞鸟云机场",
         "✈️ FlyingBird",
         "✈️ 牛逼机场",
         "✈️ 三分机场",
-        "✈️ 飞鸟云机场",
         "✔️ GPT",
         "🇭🇰 香港",
         "🇨🇳 台湾",
