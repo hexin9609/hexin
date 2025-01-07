@@ -54,8 +54,7 @@
   "route": {
     "rules": [
       {
-        "type": "field",
-        "ip": ["192.168.8.0/24"],
+        "port": 9696,
         "outbound": "direct"
       },
       {
