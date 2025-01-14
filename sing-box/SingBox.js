@@ -43,6 +43,9 @@ config.outbounds.map(i => {
   if (['🇸🇬 新加坡'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /新加坡/i))
   }
+  if (['🇺🇸 美国'].includes(i.tag)) {
+    i.outbounds.push(...getTags(proxies, /美国/i))
+  }
   if (['🌐 其它地区'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /^(?!.*(?:香港|台湾|日本|新加坡)).*()/i))
   }
