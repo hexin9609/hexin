@@ -79,7 +79,7 @@
     { "tag": "📲 Telegram", "type": "selector", "outbounds": ["✅️ 节点选择", "🔄 自动选择机场", "✈️ FlyingBird", "✈️ 牛逼机场", "✈️ 三分机场", "✈️ 飞鸟云机场", "🇭🇰 香港", "🇨🇳 台湾", "🇯🇵 日本", "🇸🇬 新加坡", "🇺🇸 美国", "🌐 其它地区", "🎯 全球直连"] },
     { "tag": "🍏 Apple", "type": "selector", "outbounds": ["🎯 全球直连"] },
     { "tag": "🐠 漏网之鱼", "type": "selector", "outbounds": ["✅️ 节点选择","🎯 全球直连"] },
-    { "tag": "GLOBAL", "type": "selector", "outbounds": ["{all}"]},
+    { "tag": "GLOBAL", "type": "selector", "outbounds": ["✅️ 节点选择"]},
     { "tag": "🎯 全球直连", "type": "direct" },
     { "tag": "dns-out", "type": "dns" }
   ],
