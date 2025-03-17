@@ -31,6 +31,8 @@ DOMAIN-SUFFIX,msftcomecttest.com
 DOMAIN-SUFFIX,dns.msftncsi.com
 DOMAIN-SUFFIX,ipv6.msftconnecttest.com
 DOMAIN-SUFFIX,fba01.fbsubcn01.cc
+DOMAIN-SUFFIX,6bsub.zhunchuanpb.com
+DOMAIN-SUFFIX,6.66jc.top
 
 # 域名关键字匹配
 DOMAIN-KEYWORD,mirror
