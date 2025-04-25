@@ -21,7 +21,19 @@ DOMAIN-SUFFIX,emby-data.wwwh.eu.org
 DOMAIN-SUFFIX,emby-data.f1rst.top
 DOMAIN-SUFFIX,emby-data.wx1.us.kg
 DOMAIN-SUFFIX,emby-data.xnn.ee
-DOMAIN-SUFFIX,api.nn.ci
+# xiaoya token
+DOMAIN-SUFFIX,proapi.115.com
+DOMAIN-SUFFIX,passportapi.115.com
+DOMAIN-SUFFIX,webapi.115.com
+DOMAIN-SUFFIX,115.com
+DOMAIN-SUFFIX,115cdn.com
+DOMAIN-SUFFIX,115cdn.net
+DOMAIN-SUFFIX,api.xhofe.top
+DOMAIN-SUFFIX,alibabacloud.com
+DOMAIN-SUFFIX,nn.ci
+DOMAIN-SUFFIX,aliyundrive.com
+DOMAIN-SUFFIX,alipan.com
+DOMAIN-SUFFIX,aliyuncs.com
 # 域名
 DOMAIN-SUFFIX,961115.xyz
 # 系统
