@@ -6,7 +6,7 @@ DOMAIN-SUFFIX,961115.xyz
 # 系统
 DOMAIN-SUFFIX,pc528.net
 # 机场
-IP-CIDR,114.132.219.239/32,no-resolve
+
 
 # xiaoya
 DOMAIN-SUFFIX,emby.xiaoya.pro
