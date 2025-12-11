@@ -1,0 +1,52 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain": [
+        "emby.xiaoya.pro",
+        "icyou.eu.org",
+        "emby.8.net.co",
+        "emby.raydoom.tk",
+        "embyxiaoya.laogl.top",
+        "emby-data.poxi1221.eu.org",
+        "emby-data.bdbd.fun",
+        "emby-data.ymschh.top",
+        "emby-data.r2s.site",
+        "emby-data.neversay.eu.org",
+        "emby-data.800686.xyz",
+        "emby-data.xn--yetq23gxma.org",
+        "emby-data.younv.at",
+        "emby.kaiserver.uk",
+        "emby-data.ermaokj.cn",
+        "emby-data.wwwh.eu.org",
+        "emby-data.f1rst.top",
+        "emby-data.wx1.us.kg",
+        "emby-data.xnn.ee",
+        "emby-data.wx1.dpdns.org",
+        "emby-data.小萝莉.org",
+        "proapi.115.com",
+        "passportapi.115.com",
+        "webapi.115.com",
+        "115.com",
+        "115cdn.com",
+        "115cdn.net",
+        "api.xhofe.top",
+        "alibabacloud.com",
+        "nn.ci",
+        "aliyundrive.com",
+        "alipan.com",
+        "aliyuncs.com"
+      ]
+    },
+    {
+      "domain_suffix": [
+        ".961115.xyz",
+        ".pc528.net"
+      ]
+    },
+    {
+      "domain_regex": [
+      ]
+    }
+  ]
+}
