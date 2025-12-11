@@ -5,11 +5,12 @@
       "domain": [
         "feiniaoyun.xyz",
         "ticketmaster.sg"
-      ]
-    },
-    {
+      ],
       "domain_suffix": [
         ".qichiyu.com"
+      ],
+      "domain_keyword": [
+        "qichiyu"
       ]
     }
   ]
