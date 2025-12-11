@@ -11,10 +11,6 @@
       "domain_suffix": [
         ".qichiyu.com"
       ]
-    },
-    {
-      "domain_regex": [
-      ]
     }
   ]
 }
