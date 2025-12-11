@@ -36,12 +36,14 @@
         "aliyundrive.com",
         "alipan.com",
         "aliyuncs.com"
-      ]
-    },
-    {
+      ],
       "domain_suffix": [
         ".961115.xyz",
         ".pc528.net"
+      ],
+      "domain_keyword": [
+        "961115",
+        "pc528"
       ]
     }
   ]
